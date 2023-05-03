@@ -1,3 +1,12 @@
+//JSON JS OBJECT NOTATION
+//aka valid js
+//if you have it as json, json sees it as plain text
+//plain text to obj that you can work with in js
+//you need to call json.parse()
+//afterwards, you would be able to treat it as an obj, and work with it as
+//an obj
+//'module.exports =" can then be used with require in server.js
+//when server.js gets it, its already an obj for you
 module.exports = {
   animals: [
     {
