@@ -60,7 +60,13 @@ const ListAnimals = () => {
         <h2>Techtonica Participants </h2>
         <ul>
           {animals.map((animal, index) => {
-            return <li key={index}>{animal.species}</li>;
+            return (
+              <li key={index}>
+                {animal.name}
+                {animal.species}
+                {animal.description}
+              </li>
+            );
           })}
         </ul>
       </div>
