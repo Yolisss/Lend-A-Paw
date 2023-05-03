@@ -17,8 +17,9 @@ app.get("/", (req, res) => {
 
 // create the get request for students in the endpoint '/api/students'
 app.get("/api/animals", async (req, res) => {
-  const animals = res.json(fakeanimals);
-  res.send(animals);
+  res.json(fakeanimals.animals);
+  //console.log(animals);
+  //res.send(animals);
   //   try {
   //     const { rows: students } = await db.query("SELECT * FROM students");
   //     res.send(students);
