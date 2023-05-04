@@ -29,6 +29,7 @@ function MyNavbar(props) {
               alt="React Bootstrap logo"
             />
           </Navbar.Brand> */}
+          <h1>Lend A Paw</h1>
           <Link to="/" className="nav-link">
             Home
           </Link>
