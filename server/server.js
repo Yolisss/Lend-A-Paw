@@ -18,15 +18,27 @@ app.get("/", (req, res) => {
 // create the get request for students in the endpoint '/api/students'
 app.get("/api/animals", async (req, res) => {
   res.json(fakeanimals.animals);
-  //console.log(animals);
-  //res.send(animals);
-  //   try {
-  //     const { rows: students } = await db.query("SELECT * FROM students");
-  //     res.send(students);
-  //   } catch (e) {
-  //     return res.status(400).json({ e });
-  //   }
+//   try {
+//     const { rows: allAnimals } = await db.query("SELECT * FROM allAnimals");
+//     //res.send(allAnimals);
+//   } catch (e) {
+//     return res.status(400).json({ e });
+//   }
 });
+
+app.get("/api/animals/:animalID", async (req, res) => {
+  //represents the obj that will be returned with the specific
+  //data we're asking for
+  //params = anytime you have a param in route
+  //ex :bookID; in order to access these values;
+  //you need to do req.params
+  //params used for searching sorting filtering etc
+  let requestedAnimal = req.params.animalID;
+  for (let animal of fakeanimals) {
+    if (fakeanimals.animal === requestedAnimal) {
+      res.json(animal);
+    }
+  }
 
 // // create the POST request
 // app.post("/api/students", async (req, res) => {
