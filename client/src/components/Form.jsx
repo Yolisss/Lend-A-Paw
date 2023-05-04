@@ -1,119 +1,147 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
+// {
+//   onSaveStudent, editingStudent, onUpdateStudent;
+// }
 
-const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
+const AdoptionForm = () => {
   // This is the original State with not initial student
-  const [student, setStudent] = useState(
-    editingStudent || {
-      firstname: "",
-      lastname: "",
-      is_current: false,
-    }
-  );
+  const [adoption, setAdoption] = useState({
+    fullname: "",
+    petInterested: "",
+    email: "",
+    reason: "",
+  });
+
+  // editingAdoption ||
 
   //create functions that handle the event of the user typing into the form
-  const handleNameChange = (event) => {
-    const firstname = event.target.value;
-    setStudent((student) => ({ ...student, firstname }));
+  const handleFullnameChange = (event) => {
+    const fullname = event.target.value;
+    setAdoption((adoption) => ({ ...adoption, fullname }));
   };
 
-  const handleLastnameChange = (event) => {
-    const lastname = event.target.value;
-    setStudent((student) => ({ ...student, lastname }));
+  const handlePetInterestedChange = (event) => {
+    const petInterested = event.target.value;
+    setAdoption((adoption) => ({ ...adoption, petInterested }));
   };
 
-  const handleCheckChange = (event) => {
-    const is_current = event.target.checked;
+  const handleEmailChange = (event) => {
+    const email = event.target.value;
     //console.log(iscurrent);
-    setStudent((student) => ({ ...student, is_current }));
+    setAdoption((adoption) => ({ ...adoption, email }));
+  };
+
+  const handleReasonChange = (event) => {
+    const reason = event.target.value;
+    //console.log(iscurrent);
+    setAdoption((adoption) => ({ ...adoption, reason }));
   };
 
   const clearForm = () => {
-    setStudent({ firstname: "", lastname: "", is_current: false });
+    setAdoption({ fullname: "", petInterested: "", email: "", reason: "" });
   };
 
   //A function to handle the post request
-  const postStudent = (newStudent) => {
-    return fetch("http://localhost:8081/api/students", {
+  const postAdoption = (newAdoption) => {
+    return fetch("http://localhost:8081/api/adoptionform", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newStudent),
+      body: JSON.stringify(newAdoption),
     })
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        //console.log("From the post ", data);
+        console.log("From the post ", data);
         //I'm sending data to the List of Students (the parent) for updating the list
-        onSaveStudent(data);
+        //onSaveStudent(data);
         //this line just for cleaning the form
         clearForm();
       });
+    console.log(newAdoption);
   };
 
   //A function to handle the post request
-  const putStudent = (toEditStudent) => {
-    return fetch(`http://localhost:8081/api/students/${toEditStudent.id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(toEditStudent),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        onUpdateStudent(data);
-        //this line just for cleaning the form
-        clearForm();
-      });
-  };
+  // const putStudent = (toEditStudent) => {
+  //   return fetch(`http://localhost:8081/api/students/${toEditStudent.id}`, {
+  //     method: "PUT",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(toEditStudent),
+  //   })
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       onUpdateStudent(data);
+  //       //this line just for cleaning the form
+  //       clearForm();
+  //     });
+  // };
 
   //A function to handle the submit in both cases - Post and Put request!
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (student.id) {
-      putStudent(student);
-    } else {
-      postStudent(student);
-    }
+    // if (adoption.id) {
+    //   putStudent(student);
+    // } else {
+    //   postStudent(student);
+    // }
+    postAdoption(adoption);
   };
 
   return (
     <Form className="form-students" onSubmit={handleSubmit}>
       <Form.Group>
-        <Form.Label>First Name</Form.Label>
+        <Form.Label>Full Name</Form.Label>
         <input
           type="text"
-          id="add-user-name"
-          placeholder="First Name"
+          id="add-user-fullname"
+          placeholder="Full name"
           required
-          value={student.firstname}
-          onChange={handleNameChange}
+          value={adoption.fullname}
+          onChange={handleFullnameChange}
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label>Last Name</Form.Label>
+        <Form.Label>Pet Interested</Form.Label>
         <input
           type="text"
-          id="add-user-lastname"
-          placeholder="Last Name"
+          id="add-user-petInterested"
+          placeholder="Pet Interested"
           required
-          value={student.lastname}
-          onChange={handleLastnameChange}
+          value={adoption.petInterested}
+          onChange={handlePetInterestedChange}
         />
       </Form.Group>
-      <Form.Check
-        type={"checkbox"}
-        id={`isCurrent`}
-        checked={student.is_current}
-        onChange={handleCheckChange}
-        label={`Are they in the current program?`}
-      />
+      <Form.Group>
+        <Form.Label>Email</Form.Label>
+        <input
+          type="text"
+          id="add-user-email"
+          placeholder="Email"
+          required
+          value={adoption.email}
+          onChange={handleEmailChange}
+        />
+        <Form.Group>
+          <Form.Label>Reason</Form.Label>
+          <input
+            type="text"
+            id="add-user-reason"
+            placeholder="Reason"
+            required
+            value={adoption.reason}
+            onChange={handleReasonChange}
+          />
+        </Form.Group>
+      </Form.Group>
+
       <Form.Group>
         <Button type="submit" variant="outline-success">
-          {student.id ? "Edit Student" : "Add Student"}
+          {adoption.id ? "Edit Adoption" : "Add Adoption"}
         </Button>
-        {student.id ? (
+        {adoption.id ? (
           <Button type="button" variant="outline-warning" onClick={clearForm}>
             Cancel
           </Button>
@@ -123,4 +151,4 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
   );
 };
 
-export default MyForm;
+export default AdoptionForm;
