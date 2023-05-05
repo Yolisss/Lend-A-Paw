@@ -43,27 +43,32 @@ app.get("/api/animals/:animalID", async (req, res) => {
 
 // // create the POST request
 app.post("/api/adoptionform", async (req, res) => {
-  // try {
-  console.log(req.body);
-  const newAdoption = {
-    fullname: req.body.fullname,
-    petInterested: req.body.petInterested,
-    email: req.body.email,
-    reason: req.body.reason,
-  };
-  //console.log([newStudent.firstname, newStudent.lastname, newStudent.iscurrent]);
-  console.log(newAdoption);
-  res.status(200).json();
-  //   const result = await db.query(
-  //     "INSERT INTO adopt(firstname, lastname, is_current) VALUES($1, $2, $3) RETURNING *",
-  //     [newStudent.firstname, newStudent.lastname, newStudent.iscurrent]
-  //   );
-  //   console.log(result.rows[0]);
-  //   res.json(result.rows[0]);
-  // } catch (e) {
-  //   console.log(e);
-  //   return res.status(400).json({ e });
-  // }
+  try {
+    console.log(req.body);
+    const newAdoption = {
+      user_id: req.body.user_id,
+      pet_id: req.body.pet_id,
+      email: req.body.email,
+      reason: req.body.reason,
+    };
+    //console.log([newStudent.firstname, newStudent.lastname, newStudent.iscurrent]);
+    console.log(newAdoption);
+    res.status(200).json();
+    const result = await db.query(
+      "INSERT INTO adoptionform(user_id, pet_id, email, reason) VALUES($1, $2, $3, $4) RETURNING *",
+      [
+        newAdoption.user_id,
+        newAdoption.pet_id,
+        newAdoption.email,
+        newAdoption.reason,
+      ]
+    );
+    console.log(result.rows[0]);
+    res.json(result.rows[0]);
+  } catch (e) {
+    console.log(e);
+    return res.status(400).json({ e });
+  }
 });
 
 // // delete request for students
