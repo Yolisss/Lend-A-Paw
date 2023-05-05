@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
+import Contactinfo from "../components/contactinfo";
+import { Container } from "semantic-ui-react";
 
 //root is going to have two elements (in this ex)
 //any child route of root is going to have this component
@@ -16,6 +18,10 @@ export default function Root() {
     <div className="App">
       <Navbar />
       <Outlet />
+      <Container>
+        <h3>Lend A Paw</h3>
+        <Contactinfo />
+      </Container>
     </div>
   );
 }
