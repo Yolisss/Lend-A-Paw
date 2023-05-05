@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
   return (
     <div>
-      <div class="fill">
+      <div>
         <img src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" />
       </div>
       <p>
@@ -12,11 +12,11 @@ export default function Home() {
       </p>
       <div>
         <img
-          class="homeimage"
+          className="homeimage"
           src="https://icatcare.org/app/uploads/2018/06/Layer-1704-1920x840.jpg"
           width="550px"
         />
-        <p>
+        <p className="homeparagraph">
           Ex doloremque, nihil consequat or nostrum consequuntur. Eius aliquip
           nulla commodi rem sed. Nisi fugit quam suscipit so ratione, and
           voluptas. Modi quasi. Eius non. Unde sunt or labore for quae or
