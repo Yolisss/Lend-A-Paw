@@ -89,6 +89,7 @@ app.post("/api/adoptionform", async (req, res) => {
   try {
     console.log(req.body);
     const newAdoption = {
+      pet_id: req.body.id,
       fullname: req.body.fullname,
       email: req.body.email,
       reason: req.body.reason,
@@ -97,8 +98,13 @@ app.post("/api/adoptionform", async (req, res) => {
     console.log(newAdoption);
     //res.status(200).json();
     const result = await db.query(
-      "INSERT INTO adoptionform(fullname, email, reason) VALUES($1, $2, $3) RETURNING *",
-      [newAdoption.fullname, newAdoption.email, newAdoption.reason]
+      "INSERT INTO adoptionform(pet_id, fullname, email,reason) VALUES($1, $2, $3, $4) RETURNING *",
+      [
+        newAdoption.pet_id,
+        newAdoption.fullname,
+        newAdoption.email,
+        newAdoption.reason,
+      ]
     );
     console.log(result.rows[0]);
     res.json(result.rows[0]);
