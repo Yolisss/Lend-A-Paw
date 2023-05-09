@@ -26,48 +26,85 @@ app.get("/api/animals", async (req, res) => {
   //   }
 });
 
-app.get("/api/animals/:animalID", async (req, res) => {
-  //represents the obj that will be returned with the specific
-  //data we're asking for
-  //params = anytime you have a param in route
-  //ex :bookID; in order to access these values;
-  //you need to do req.params
-  //params used for searching sorting filtering etc
-  let requestedAnimal = req.params.animalID;
-  for (let animal of fakeanimals) {
-    if (fakeanimals.animal === requestedAnimal) {
-      res.json(animal);
-    }
-  }
-});
+// app.get("/api/animals", (req, res) => {
+//   //recieving request. in query param we're getting city value
+//   //process: is a reference to the current execution that's running your code (node)
+//   //any environment var that node has access to, will be accessible via process.env
+//   //exist by default in terminal
+//   let key = process.env.API_KEY;
+//   let animal = req.query.animal;
+//   console.log(city);
+//   let URL = "https://api.petfinder.com/v2/animals";
+//   console.log(URL);
+//   fetch(URL)
+//     //what code do you want to execute when that fetch is finished
+//     //.then executes once the fetch has been resolved
+//     //i get the respond back essentially as a string
+//     //json converts string to actual object
+//     //.json returns another promise
+//     .then((response) => response.json())
+//     .then((result) => {
+//       console.log(result);
+//       result.name;
+//       result.weather[0].icon;
+//       result.main.temp;
+//       result.main.feels_like;
+//       result.main.temp_min;
+//       result.main.temp_max;
+//       result.main.humidity;
+//       result.wind.speed;
+//       //it is returning that result obj as a json response
+//       //that can then be used by the front end
+//       //result defining new obj from api
+//       res.json({
+//         name: result.name,
+//         icon: result.weather[0].icon,
+//         temp: result.main.temp,
+//         feels_like: result.main.feels_like,
+//         min: result.main.temp_min,
+//         max: result.main.temp_max,
+//         humidity: result.main.humidity,
+//         windspeed: result.wind.speed,
+//       });
+//     });
+// });
+
+// app.get("/api/animals/:animalID", async (req, res) => {
+//   //represents the obj that will be returned with the specific
+//   //data we're asking for
+//   //params = anytime you have a param in route
+//   //ex :bookID; in order to access these values;
+//   //you need to do req.params
+//   //params used for searching sorting filtering etc
+//   let requestedAnimal = req.params.animalID;
+//   for (let animal of fakeanimals) {
+//     if (fakeanimals.animal === requestedAnimal) {
+//       res.json(animal);
+//     }
+//   }
+// });
 
 // // create the POST request
 app.post("/api/adoptionform", async (req, res) => {
   try {
     console.log(req.body);
     const newAdoption = {
-      user_id: req.body.user_id,
-      pet_id: req.body.pet_id,
+      fullname: req.body.fullname,
       email: req.body.email,
       reason: req.body.reason,
     };
     //console.log([newStudent.firstname, newStudent.lastname, newStudent.iscurrent]);
     console.log(newAdoption);
-    res.status(200).json();
+    //res.status(200).json();
     const result = await db.query(
-      "INSERT INTO adoptionform(user_id, pet_id, email, reason) VALUES($1, $2, $3, $4) RETURNING *",
-      [
-        newAdoption.user_id,
-        newAdoption.pet_id,
-        newAdoption.email,
-        newAdoption.reason,
-      ]
+      "INSERT INTO adoptionform(fullname, email, reason) VALUES($1, $2, $3) RETURNING *",
+      [newAdoption.fullname, newAdoption.email, newAdoption.reason]
     );
     console.log(result.rows[0]);
     res.json(result.rows[0]);
   } catch (e) {
     console.log(e);
-    return res.status(400).json({ e });
+    res.status(400).json({ e });
   }
 });
 
