@@ -63,7 +63,7 @@ const ListAnimals = (props) => {
   return (
     <div className="mybody">
       <div className="list-students">
-        <h2>Techtonica Participants </h2>
+        <h2>Meet Our Adoptable Pets </h2>
         <ul>
           {animals.map((animal, index) => {
             return (
