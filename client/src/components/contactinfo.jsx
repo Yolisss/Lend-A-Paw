@@ -1,5 +1,5 @@
 import React from "react";
-import { List } from "semantic-ui-react";
+import { List, Icon } from "semantic-ui-react";
 
 // export default function Contactinfo() {
 //   return (
