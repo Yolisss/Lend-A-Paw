@@ -8,7 +8,6 @@ const AdoptionForm = () => {
   // This is the original State with not initial student
   const [adoption, setAdoption] = useState({
     fullname: "",
-    petInterested: "",
     email: "",
     reason: "",
   });
@@ -21,10 +20,10 @@ const AdoptionForm = () => {
     setAdoption((adoption) => ({ ...adoption, fullname }));
   };
 
-  const handlePetInterestedChange = (event) => {
-    const petInterested = event.target.value;
-    setAdoption((adoption) => ({ ...adoption, petInterested }));
-  };
+  // const handlePetIdChange = (event) => {
+  //   const petInterested = event.target.value;
+  //   setAdoption((adoption) => ({ ...adoption, petInterested }));
+  // };
 
   const handleEmailChange = (event) => {
     const email = event.target.value;
@@ -39,7 +38,11 @@ const AdoptionForm = () => {
   };
 
   const clearForm = () => {
-    setAdoption({ fullname: "", petInterested: "", email: "", reason: "" });
+    setAdoption({
+      fullname: "",
+      email: "",
+      reason: "",
+    });
   };
 
   //A function to handle the post request
@@ -59,7 +62,7 @@ const AdoptionForm = () => {
         //this line just for cleaning the form
         clearForm();
       });
-    console.log(newAdoption);
+    //console.log(newAdoption);
   };
 
   //A function to handle the post request
@@ -101,17 +104,6 @@ const AdoptionForm = () => {
           required
           value={adoption.fullname}
           onChange={handleFullnameChange}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Pet Interested</Form.Label>
-        <input
-          type="text"
-          id="add-user-petInterested"
-          placeholder="Pet Interested"
-          required
-          value={adoption.petInterested}
-          onChange={handlePetInterestedChange}
         />
       </Form.Group>
       <Form.Group>
