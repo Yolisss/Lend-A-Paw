@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import Form from "../components/Form";
+import { useParams } from "react-router-dom";
 
 export default function Adoptionpage() {
-  const [id, setId] = useState(null);
+  const { animalid } = useParams();
   return (
     <div>
+      <h3>Thank You For Considering Adoption!</h3>
       <div>
         Annoy owner until he gives you food say meow repeatedly until belly
         rubs, feels good missing until dinner time, yet meow meow pee in shoe
@@ -23,7 +25,30 @@ export default function Adoptionpage() {
         what the heck just happened, something feels fishy, cat cat moo moo lick
         ears lick paws.{" "}
       </div>
-      <Form id={id} />
+      <div className="row">
+        <div className="column">
+          <img
+            src="https://t4.ftcdn.net/jpg/00/84/66/63/360_F_84666330_LoeYCZ5LCobNwWePKbykqEfdQOZ6fipq.jpg"
+            alt="A floof"
+            style={{ width: "350px" }}
+          />
+        </div>
+        <div className="column">
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/small-fuffy-dog-breeds-1623362663.jpg?crop=1.00xw:0.753xh;0,0.0719xh&resize=1200:*"
+            alt="pomeranian"
+            style={{ width: "350px" }}
+          />
+        </div>
+        <div className="column">
+          <img
+            src="https://economictimes.indiatimes.com/thumb/msid-95129274,width-1600,height-1066,resizemode-4,imgsize-59990/national-black-cat-day-see-why-us-celebrates-this-occasion.jpg?from=mdr"
+            alt="black floofy cat"
+            style={{ width: "350px" }}
+          />
+        </div>
+      </div>
+      <Form id={animalid} />
     </div>
   );
 }
