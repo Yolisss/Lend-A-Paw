@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Card } from "semantic-ui-react";
 //import * as ioicons from "react-icons/io5";
-import MyForm from "./Form";
-import Student from "./Student";
+import AdoptionForm from "./Form";
+import { Link } from "react-router-dom";
+// import Student from "./Student";
 
-const ListAnimals = () => {
+const ListAnimals = (props) => {
   // this is my original state with an array of students
   const [animals, setAnimals] = useState([]);
 
@@ -18,6 +20,10 @@ const ListAnimals = () => {
         setAnimals(animals);
       });
   };
+
+  // let newId = () => {
+  //   props.setId();
+  // };
 
   useEffect(() => {
     loadAnimals();
@@ -61,11 +67,19 @@ const ListAnimals = () => {
         <ul>
           {animals.map((animal, index) => {
             return (
-              <li key={index}>
-                {animal.name}
-                {animal.species}
-                {animal.description}
-              </li>
+              <Card key={index}>
+                <Card.Content>
+                  <li>
+                    {animal.name}
+                    {animal.species}
+                    {animal.description}
+                    <Link to={`/adopt/${animal.id}`}>Adopt</Link>
+                    {/* <button onClick={() => props.setId(animal.id)}>
+                      Adopt!
+                    </button> */}
+                  </li>
+                </Card.Content>
+              </Card>
             );
           })}
         </ul>
