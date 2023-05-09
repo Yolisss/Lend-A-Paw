@@ -4,7 +4,7 @@ import { Button, Form } from "react-bootstrap";
 //   onSaveStudent, editingStudent, onUpdateStudent;
 // }
 
-const AdoptionForm = () => {
+const AdoptionForm = (props) => {
   // This is the original State with not initial student
   const [adoption, setAdoption] = useState({
     fullname: "",
@@ -85,12 +85,18 @@ const AdoptionForm = () => {
   //A function to handle the submit in both cases - Post and Put request!
   const handleSubmit = (e) => {
     e.preventDefault();
+    let newAdoption = {
+      id: props.id,
+      fullname: adoption.fullname,
+      email: adoption.email,
+      reason: adoption.reason,
+    };
     // if (adoption.id) {
     //   putStudent(student);
     // } else {
     //   postStudent(student);
     // }
-    postAdoption(adoption);
+    postAdoption(newAdoption);
   };
 
   return (
