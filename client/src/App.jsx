@@ -7,6 +7,7 @@ import Home from "./pages/home";
 import Aboutus from "./pages/aboutus";
 import Adoptablepets from "./pages/adoptablepets";
 import Waystohelp from "./pages/waystohelp";
+import AdoptionForm from "./components/Form";
 //Browser router which will actually help connect to the browser
 //routes component which is going to be the parent for all our routes
 //route, used to set up a single page
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "waystohelp",
         element: <Waystohelp />,
+      },
+      {
+        path: "adopt/:animalid",
+        element: <AdoptionForm />,
       },
     ],
   },
