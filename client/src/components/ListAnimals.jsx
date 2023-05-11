@@ -3,6 +3,8 @@ import { Card } from "semantic-ui-react";
 //import * as ioicons from "react-icons/io5";
 import AdoptionForm from "./Form";
 import { Link } from "react-router-dom";
+import { Placeholder } from "semantic-ui-react";
+import Catordog from "./catordog";
 // import Student from "./Student";
 
 const ListAnimals = (props) => {
@@ -71,7 +73,12 @@ const ListAnimals = (props) => {
                 <Card.Content>
                   <li>
                     {animal.name}
-                    {animal.species}
+                    {animal.photos.length === 0 ? (
+                      <Catordog />
+                    ) : (
+                      <img src={animal.photos[0].small} />
+                    )}
+                    ,{animal.species}
                     {animal.description}
                     <Link to={`/adopt/${animal.id}`}>Adopt</Link>
                     {/* <button onClick={() => props.setId(animal.id)}>
