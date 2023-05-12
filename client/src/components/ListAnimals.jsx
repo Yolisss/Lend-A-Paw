@@ -5,18 +5,19 @@ import AdoptionForm from "./Form";
 import { Link } from "react-router-dom";
 import { Placeholder } from "semantic-ui-react";
 import Catordog from "./catordog";
-// import Student from "./Student";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const ListAnimals = (props) => {
   // this is my original state with an array of students
   const [animals, setAnimals] = useState([]);
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   //this is the state needed for the UpdateRequest
   //const [editingStudent, setEditingStudent] = useState(null);
 
   const loadAnimals = () => {
     // A function to fetch the list of students that will be load anytime that list change
-    fetch("http://localhost:8081/api/animals")
+    fetch("/api/animals")
       .then((response) => response.json())
       .then((animals) => {
         setAnimals(animals);
@@ -81,6 +82,13 @@ const ListAnimals = (props) => {
                     ,{animal.species}
                     {animal.description}
                     <Link to={`/adopt/${animal.id}`}>Adopt</Link>
+                    {/* {isAuthenticated ? (
+                      <Link to={`/adopt/${animal.id}`}>Adopt</Link>
+                    ) : (
+                      <button onClick={() => loginWithRedirect()}>
+                        Log In
+                      </button>
+                    )} */}
                     {/* <button onClick={() => props.setId(animal.id)}>
                       Adopt!
                     </button> */}
