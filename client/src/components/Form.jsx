@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
+import Thankyou from "./thankyou";
 // {
 //   onSaveStudent, editingStudent, onUpdateStudent;
 // }
@@ -47,7 +48,7 @@ const AdoptionForm = (props) => {
 
   //A function to handle the post request
   const postAdoption = (newAdoption) => {
-    return fetch("http://localhost:8081/api/adoptionform", {
+    return fetch("/api/adoptionform", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newAdoption),
@@ -99,6 +100,11 @@ const AdoptionForm = (props) => {
     postAdoption(newAdoption);
   };
 
+  // const handleRedirect = (e) => {
+  //   e.preventDefault();
+  //   <Thankyou />;
+  // };
+
   return (
     <Form className="form-students" onSubmit={handleSubmit}>
       <Form.Group>
@@ -136,7 +142,11 @@ const AdoptionForm = (props) => {
       </Form.Group>
 
       <Form.Group>
-        <Button type="submit" variant="outline-success">
+        <Button
+          type="submit"
+          variant="outline-success"
+          // onClick={handleRedirect}
+        >
           {adoption.id ? "Edit Adoption" : "Add Adoption"}
         </Button>
         {adoption.id ? (
