@@ -5,11 +5,16 @@ const path = require("path");
 const db = require("./db/db-connection.js");
 const fakeanimals = require("./fakeanimaldata.js");
 const fetch = require("node-fetch");
+//const path = require("path");
+//const { appendFileSync } = require("fs");
 
 const app = express();
 const PORT = process.env.PORT || 8081;
+const REACT_BUILD_DIR = path.join(__dirname, "..", "client", "dist");
+
 app.use(cors());
 app.use(express.json());
+app.use(express.static(REACT_BUILD_DIR));
 
 //get 0Auth token as you need it
 //we'll be storing 0auth in a var and get a new one as we need it
@@ -87,7 +92,8 @@ async function getOAuthToken() {
 
 // creates an endpoint for the route "/""
 app.get("/", (req, res) => {
-  res.json({ message: "Hola, from My template ExpressJS with React-Vite" });
+  res.sendFile(path.join(REACT_BUILD_DIR, "index.html"));
+  //res.json({ message: "Hola, from My template ExpressJS with React-Vite" });
 });
 
 // create the get request for students in the endpoint '/api/students'
