@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import Thankyou from "./thankyou";
+import { useNavigate } from "react-router-dom";
 // {
 //   onSaveStudent, editingStudent, onUpdateStudent;
 // }
 
 const AdoptionForm = (props) => {
+  const navigate = useNavigate();
+
   // This is the original State with not initial student
   const [adoption, setAdoption] = useState({
     fullname: "",
@@ -47,8 +50,8 @@ const AdoptionForm = (props) => {
   };
 
   //A function to handle the post request
-  const postAdoption = (newAdoption) => {
-    return fetch("/api/adoptionform", {
+  const postAdoption = async (newAdoption) => {
+    await fetch("/api/adoptionform", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newAdoption),
@@ -62,6 +65,7 @@ const AdoptionForm = (props) => {
         //onSaveStudent(data);
         //this line just for cleaning the form
         clearForm();
+        navigate("/thankyou");
       });
     //console.log(newAdoption);
   };
