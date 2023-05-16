@@ -75,7 +75,7 @@ const ListAnimals = (props) => {
                   <li>
                     {animal.name}
                     {animal.photos.length === 0 ? (
-                      <Catordog />
+                      <Catordog species={animal.species} />
                     ) : (
                       <img src={animal.photos[0].small} />
                     )}
