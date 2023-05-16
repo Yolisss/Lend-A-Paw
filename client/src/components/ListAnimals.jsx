@@ -3,18 +3,21 @@ import { Card } from "semantic-ui-react";
 //import * as ioicons from "react-icons/io5";
 import AdoptionForm from "./Form";
 import { Link } from "react-router-dom";
-// import Student from "./Student";
+import { Placeholder } from "semantic-ui-react";
+import Catordog from "./catordog";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const ListAnimals = (props) => {
   // this is my original state with an array of students
   const [animals, setAnimals] = useState([]);
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   //this is the state needed for the UpdateRequest
   //const [editingStudent, setEditingStudent] = useState(null);
 
   const loadAnimals = () => {
     // A function to fetch the list of students that will be load anytime that list change
-    fetch("http://localhost:8081/api/animals")
+    fetch("/api/animals")
       .then((response) => response.json())
       .then((animals) => {
         setAnimals(animals);
@@ -63,7 +66,7 @@ const ListAnimals = (props) => {
   return (
     <div className="mybody">
       <div className="list-students">
-        <h2>Techtonica Participants </h2>
+        <h2>Meet Our Adoptable Pets </h2>
         <ul>
           {animals.map((animal, index) => {
             return (
@@ -71,9 +74,21 @@ const ListAnimals = (props) => {
                 <Card.Content>
                   <li>
                     {animal.name}
-                    {animal.species}
+                    {animal.photos.length === 0 ? (
+                      <Catordog species={animal.species} />
+                    ) : (
+                      <img src={animal.photos[0].small} />
+                    )}
+                    ,{animal.species}
                     {animal.description}
                     <Link to={`/adopt/${animal.id}`}>Adopt</Link>
+                    {/* {isAuthenticated ? (
+                      <Link to={`/adopt/${animal.id}`}>Adopt</Link>
+                    ) : (
+                      <button onClick={() => loginWithRedirect()}>
+                        Log In
+                      </button>
+                    )} */}
                     {/* <button onClick={() => props.setId(animal.id)}>
                       Adopt!
                     </button> */}

@@ -4,15 +4,96 @@ require("dotenv").config();
 const path = require("path");
 const db = require("./db/db-connection.js");
 const fakeanimals = require("./fakeanimaldata.js");
+const fetch = require("node-fetch");
+//const path = require("path");
+//const { appendFileSync } = require("fs");
 
 const app = express();
 const PORT = process.env.PORT || 8081;
+const REACT_BUILD_DIR = path.join(__dirname, "..", "client", "dist");
+
 app.use(cors());
 app.use(express.json());
+app.use(express.static(REACT_BUILD_DIR));
+
+//get 0Auth token as you need it
+//we'll be storing 0auth in a var and get a new one as we need it
+let OAuthToken = "";
+//time to live
+//keeps track how long this token is going to be active for
+let OAuthTokenTTL = null;
+//whenever you call this function, its going to be a blocking function
+//bc the 0authtoken is necessary before you can make subsequent calls
+// when something is blocking, none of the api calls will be called until
+//we get the token
+async function getOAuthToken() {
+  //current time
+  let now = new Date();
+  //current time + 10 secs
+  //allow a buffer
+  //if the token we have is within 10s seconds of expiring,
+  //generate a new one
+  now.setSeconds(now.getSeconds() + 10);
+
+  //if the current time + 10 secs is less than 3600
+  //return access_token which will allow us to continue
+  //reusing the same token to make API calls
+  if (OAuthTokenTTL != null && now < OAuthTokenTTL) {
+    return OAuthToken;
+  }
+  //headers: specifies content type; telling the server how to handle the
+  // incoming request
+  //specifying the format of the data we're sending is in 'www' form incoded in format
+  //where you're sending 0authtoken in other calls
+  const myHeaders = { "Content-Type": "application/x-www-form-urlencoded" };
+  //browser only and doesn't exist in node which is why we had to write it in an obj on line 44
+  //myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+  const urlencoded = new URLSearchParams();
+  //sending data as url incoded
+  urlencoded.append("grant_type", "client_credentials");
+  urlencoded.append("client_id", process.env.PET_FINDER_CLIENT_KEY);
+  urlencoded.append("client_secret", process.env.PET_FINDER_APISECRET_KEY);
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: urlencoded,
+    redirect: "follow",
+  };
+
+  //and we recieve it, it'll be in json format
+
+  const result = await fetch(
+    "https://api.petfinder.com/v2/oauth2/token",
+    requestOptions
+  );
+  const response = await result.json();
+  OAuthToken = response.access_token;
+  //current time + time that is going to expires in
+  //creating a new day time. without anything inside it,
+  //it will give you the current time
+  //ex. 12:00:35
+  //with new Date, OAuthTokenTTL now has the data that it will expire
+  //in 1 hour, 0 mins and 35 seconds
+  //TIME TO LIVE
+  //at what time will the token expire
+  //when you call to the api it returns 3600 seconds which indicates
+  //how much we have left before it expires
+  OAuthTokenTTL = new Date();
+  //we're getting 35
+  //35 + expires_in = 3635
+  //js will convert 3635 to the correct num of hour, mins, seconds
+  //set those seconds to the OAuthTTL
+  //get the current time and add that to the 3600
+  //
+  OAuthTokenTTL.setSeconds(OAuthTokenTTL.getSeconds() + response.expires_in);
+}
 
 // creates an endpoint for the route "/""
 app.get("/", (req, res) => {
-  res.json({ message: "Hola, from My template ExpressJS with React-Vite" });
+  res.sendFile(path.join(REACT_BUILD_DIR, "index.html"));
+  //res.json({ message: "Hola, from My template ExpressJS with React-Vite" });
 });
 
 // create the get request for students in the endpoint '/api/students'
@@ -26,17 +107,20 @@ app.get("/api/animals", async (req, res) => {
   //   }
 });
 
-// app.get("/api/animals", (req, res) => {
+// app.get("/api/animals", async (req, res) => {
 //   //recieving request. in query param we're getting city value
 //   //process: is a reference to the current execution that's running your code (node)
 //   //any environment var that node has access to, will be accessible via process.env
 //   //exist by default in terminal
-//   let key = process.env.API_KEY;
-//   let animal = req.query.animal;
-//   console.log(city);
+//   let access_token = await getOAuthToken();
+//   // let animal = req.query.animals;
 //   let URL = "https://api.petfinder.com/v2/animals";
 //   console.log(URL);
-//   fetch(URL)
+//   fetch(URL, {
+//     headers: {
+//       Authorization: `Bearer ${access_token}`,
+//     },
+//   })
 //     //what code do you want to execute when that fetch is finished
 //     //.then executes once the fetch has been resolved
 //     //i get the respond back essentially as a string
@@ -45,27 +129,11 @@ app.get("/api/animals", async (req, res) => {
 //     .then((response) => response.json())
 //     .then((result) => {
 //       console.log(result);
-//       result.name;
-//       result.weather[0].icon;
-//       result.main.temp;
-//       result.main.feels_like;
-//       result.main.temp_min;
-//       result.main.temp_max;
-//       result.main.humidity;
-//       result.wind.speed;
+
 //       //it is returning that result obj as a json response
 //       //that can then be used by the front end
 //       //result defining new obj from api
-//       res.json({
-//         name: result.name,
-//         icon: result.weather[0].icon,
-//         temp: result.main.temp,
-//         feels_like: result.main.feels_like,
-//         min: result.main.temp_min,
-//         max: result.main.temp_max,
-//         humidity: result.main.humidity,
-//         windspeed: result.wind.speed,
-//       });
+//       res.json(result.animals);
 //     });
 // });
 
@@ -89,6 +157,7 @@ app.post("/api/adoptionform", async (req, res) => {
   try {
     console.log(req.body);
     const newAdoption = {
+      pet_id: req.body.id,
       fullname: req.body.fullname,
       email: req.body.email,
       reason: req.body.reason,
@@ -97,8 +166,13 @@ app.post("/api/adoptionform", async (req, res) => {
     console.log(newAdoption);
     //res.status(200).json();
     const result = await db.query(
-      "INSERT INTO adoptionform(fullname, email, reason) VALUES($1, $2, $3) RETURNING *",
-      [newAdoption.fullname, newAdoption.email, newAdoption.reason]
+      "INSERT INTO adoptionform(pet_id, fullname, email,reason) VALUES($1, $2, $3, $4) RETURNING *",
+      [
+        newAdoption.pet_id,
+        newAdoption.fullname,
+        newAdoption.email,
+        newAdoption.reason,
+      ]
     );
     console.log(result.rows[0]);
     res.json(result.rows[0]);

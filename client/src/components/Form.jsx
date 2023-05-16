@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
+import Thankyou from "./thankyou";
 // {
 //   onSaveStudent, editingStudent, onUpdateStudent;
 // }
 
-const AdoptionForm = () => {
+const AdoptionForm = (props) => {
   // This is the original State with not initial student
   const [adoption, setAdoption] = useState({
     fullname: "",
@@ -47,7 +48,7 @@ const AdoptionForm = () => {
 
   //A function to handle the post request
   const postAdoption = (newAdoption) => {
-    return fetch("http://localhost:8081/api/adoptionform", {
+    return fetch("/api/adoptionform", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newAdoption),
@@ -85,13 +86,24 @@ const AdoptionForm = () => {
   //A function to handle the submit in both cases - Post and Put request!
   const handleSubmit = (e) => {
     e.preventDefault();
+    let newAdoption = {
+      id: props.id,
+      fullname: adoption.fullname,
+      email: adoption.email,
+      reason: adoption.reason,
+    };
     // if (adoption.id) {
     //   putStudent(student);
     // } else {
     //   postStudent(student);
     // }
-    postAdoption(adoption);
+    postAdoption(newAdoption);
   };
+
+  // const handleRedirect = (e) => {
+  //   e.preventDefault();
+  //   <Thankyou />;
+  // };
 
   return (
     <Form className="form-students" onSubmit={handleSubmit}>
@@ -130,7 +142,11 @@ const AdoptionForm = () => {
       </Form.Group>
 
       <Form.Group>
-        <Button type="submit" variant="outline-success">
+        <Button
+          type="submit"
+          variant="outline-success"
+          // onClick={handleRedirect}
+        >
           {adoption.id ? "Edit Adoption" : "Add Adoption"}
         </Button>
         {adoption.id ? (
