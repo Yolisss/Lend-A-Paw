@@ -5,6 +5,7 @@
 - About
 - Tech Stack
 - API Reference
+- Drawing Board/Planning Phase
 
 <h2>About<h2>
 <h3 align="center"> Why use Lend A Paw? - App Overview </h3>
@@ -64,5 +65,43 @@
         <img src="petfinder.png" width="60" height="48" alt="PetFinder" />
      </td>
    <td align="center"><img src="https://user-images.githubusercontent.com/76704309/202351473-c2b9308b-9fd1-4dd6-980e-108bb1eb8731.png" height="40px"><br>Auth0</td>
+  </tr>
+</table>
+  
+<h2 align="center">Drawing Board/Planning Phase</h2>
+<h3 align="center"> Official Database Schema </h3>
+<h4 align="center">User</h4>
+<table align="center">
+  </tr>
+  <tr>
+    <th>id</th>
+    <th>nickname</th>
+    <th>first Name</th>
+    <th>last Name</th>
+    <th>email</th>
+  </tr>
+  <tr>
+    <td>INTEGER (Primary Key)</td>
+    <td>VARCHAR (255)</td>
+    <td>VARCHAR (255)</td>
+    <td>VARCHAR (255)</td>
+    <td>VARCHAR (255)</td>
+  </tr>
+</table>
+<h4 align="center">Adoption_form</h4>
+<table align="center">
+  <tr>
+    <th>id</th>
+    <th>pet_id</th>
+    <th>fullname</th>
+    <th>email</th>
+    <th>reason</th>
+  </tr>
+  <tr>
+    <td>INTEGER (Primary Key)</td>
+    <td>INTEGER (Foreign Key)</td>
+    <td>VARCHAR (255)</td>
+    <td>VARCHAR (255)</td>
+    <td>VARCHAR (255)</td>
   </tr>
 </table>
