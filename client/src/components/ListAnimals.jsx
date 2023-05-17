@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 const ListAnimals = (props) => {
   // this is my original state with an array of students
   const [animals, setAnimals] = useState([]);
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
   //this is the state needed for the UpdateRequest
   //const [editingStudent, setEditingStudent] = useState(null);
@@ -81,17 +81,13 @@ const ListAnimals = (props) => {
                     )}
                     ,{animal.species}
                     {animal.description}
-                    <Link to={`/adopt/${animal.id}`}>Adopt</Link>
-                    {/* {isAuthenticated ? (
+                    {isAuthenticated ? (
                       <Link to={`/adopt/${animal.id}`}>Adopt</Link>
                     ) : (
                       <button onClick={() => loginWithRedirect()}>
                         Log In
                       </button>
-                    )} */}
-                    {/* <button onClick={() => props.setId(animal.id)}>
-                      Adopt!
-                    </button> */}
+                    )}
                   </li>
                 </Card.Content>
               </Card>
@@ -104,3 +100,13 @@ const ListAnimals = (props) => {
 };
 
 export default ListAnimals;
+
+{
+  /* <Link to={`/adopt/${animal.id}`}>Adopt</Link>; */
+}
+
+{
+  /* <button onClick={() => props.setId(animal.id)}>
+                      Adopt!
+                    </button>*/
+}
