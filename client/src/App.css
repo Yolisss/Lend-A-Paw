@@ -97,6 +97,10 @@ button.btn.btn-primary {
   margin: 5%;
 }
 
+.secondhomeimage {
+  width: fit-content;
+}
+
 .homeparagraph {
   font-size: 15px;
   padding-left: 20px;
@@ -108,6 +112,15 @@ button.btn.btn-primary {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.homecards1 {
+  display: flex;
+  text-align: center;
+  margin: 3rem;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
 
 /* .container {
