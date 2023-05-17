@@ -5,6 +5,8 @@ import { Button, Header, Image, Modal } from "semantic-ui-react";
 
 export default function Home() {
   const [open, setOpen] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+
   return (
     <div className="container">
       <div className="homeimage">
@@ -20,95 +22,102 @@ export default function Home() {
           width="100%"
         />
       </div>
-      <div className="homecards1">
-        <Card>
-          <CardContent>
-            <CardDescription>
-              Deciding to adopt a rescue pet or shelter dog is an important
-              decision. It can be tough to take into account everything you’ll
-              need to be prepared for (both expected and unexpected), but the
-              rewards of adopting a four-legged friend outweigh most concerns
-              and fears many people have concerning adoption. Still not
-              convinced? See our top 5 reasons to adopt:{" "}
-            </CardDescription>
-            <Modal
-              onClose={() => setOpen(false)}
-              onOpen={() => setOpen(true)}
-              open={open}
-              trigger={<Button>Learn More</Button>}
-            >
-              <Modal.Header>
-                A Few Reasons to Adopt A Shelter Animal
-              </Modal.Header>
-              <Modal.Content image>
-                <Image
-                  size="medium"
-                  src="https://www.gannett-cdn.com/presto/2021/03/04/PTCN/e24f4e1b-5197-4469-9ffa-3defd8893efd-Texas_Dogs_03.jpg?crop=3000,1688,x0,y123&width=660&height=372&format=pjpg&auto=webp"
-                  wrapped
-                />
-                <Modal.Description>
-                  <ul>
-                    <li>
-                      <h4>1. You're Saving More Than One Life</h4>
-                      It goes without saying that when you adopt a rescue pet,
-                      you’re saving a life—but you’re actually saving more than
-                      one. By adopting, you’re helping make space for another
-                      animal in need and helping to give them the opportunity to
-                      become beloved pets.
-                    </li>
-                    <li>
-                      <h4>2. Unconditinal Love! What Could Be Better?</h4>
-                      Many people worry about connecting with a rescued dog, but
-                      shelter dogs have so much love to give—and they won’t ever
-                      stop giving it to you once you let them into your heart!
-                    </li>
-                    <li>
-                      <h4>
-                        3.You're Giving A Second Chance to a Deserving Animal
-                      </h4>
-                      Beyond just helping an animal in need, you’re giving a
-                      rescue an opportunity to find their voice; to be
-                      themselves and get a second chance to become a dog beyond
-                      the walls of shelter or rescue. You truly give them the
-                      keys to start anew in a life where second chances can
-                      often be hard to come by
-                    </li>
-                    <li>
-                      <h4>4. You Get a Chance to Stay Actice</h4>
-                      Maybe you’re trying to live a more active lifestyle, or
-                      maybe you’re just looking for a new adventure. Either way,
-                      a new four-legged friend gives you a reason to get
-                      outdoors more and stretch your legs!
-                    </li>
-                    <li>
-                      <h4>5. You're Fighting Back Agains Cruel Breeding</h4>
-                      Puppies purchased at pet stores almost always come from
-                      cruel breeding facilities where dogs are confined to
-                      small, filthy spaces and receive little to no veterinary
-                      care. By adopting from your local shelter or rescue, you
-                      are giving back to your community instead of helping cruel
-                      breeders profit.
-                    </li>
-                  </ul>
-                </Modal.Description>
-              </Modal.Content>
-              <Modal.Actions>
-                <Button color="black" onClick={() => setOpen(false)}>
-                  Close
-                </Button>
-                {/* <Button
+      <div class="row">
+        <div class="col-md-4">
+          <Card>
+            <CardContent className="p-4 d-flex flex-column justify-content-center">
+              <CardDescription>
+                Deciding to adopt a rescue pet or shelter dog is an important
+                decision. It can be tough to take into account everything you’ll
+                need to be prepared for (both expected and unexpected), but the
+                rewards of adopting a four-legged friend outweigh most concerns
+                and fears many people have concerning adoption. Still not
+                convinced? See our top 5 reasons to adopt:{" "}
+              </CardDescription>
+              <Modal
+                onClose={() => setOpen(false)}
+                onOpen={() => setOpen(true)}
+                open={open}
+                trigger={
+                  <div className="text-center">
+                    <Button className="mt-4">Learn More</Button>
+                  </div>
+                }
+              >
+                <Modal.Header>
+                  A Few Reasons to Adopt A Shelter Animal
+                </Modal.Header>
+                <Modal.Content image>
+                  <Image
+                    size="medium"
+                    src="https://www.gannett-cdn.com/presto/2021/03/04/PTCN/e24f4e1b-5197-4469-9ffa-3defd8893efd-Texas_Dogs_03.jpg?crop=3000,1688,x0,y123&width=660&height=372&format=pjpg&auto=webp"
+                    wrapped
+                  />
+                  <Modal.Description>
+                    <ul>
+                      <li>
+                        <h4>1. You're Saving More Than One Life</h4>
+                        It goes without saying that when you adopt a rescue pet,
+                        you’re saving a life—but you’re actually saving more
+                        than one. By adopting, you’re helping make space for
+                        another animal in need and helping to give them the
+                        opportunity to become beloved pets.
+                      </li>
+                      <li>
+                        <h4>2. Unconditinal Love! What Could Be Better?</h4>
+                        Many people worry about connecting with a rescued dog,
+                        but shelter dogs have so much love to give—and they
+                        won’t ever stop giving it to you once you let them into
+                        your heart!
+                      </li>
+                      <li>
+                        <h4>
+                          3.You're Giving A Second Chance to a Deserving Animal
+                        </h4>
+                        Beyond just helping an animal in need, you’re giving a
+                        rescue an opportunity to find their voice; to be
+                        themselves and get a second chance to become a dog
+                        beyond the walls of shelter or rescue. You truly give
+                        them the keys to start anew in a life where second
+                        chances can often be hard to come by
+                      </li>
+                      <li>
+                        <h4>4. You Get a Chance to Stay Actice</h4>
+                        Maybe you’re trying to live a more active lifestyle, or
+                        maybe you’re just looking for a new adventure. Either
+                        way, a new four-legged friend gives you a reason to get
+                        outdoors more and stretch your legs!
+                      </li>
+                      <li>
+                        <h4>5. You're Fighting Back Agains Cruel Breeding</h4>
+                        Puppies purchased at pet stores almost always come from
+                        cruel breeding facilities where dogs are confined to
+                        small, filthy spaces and receive little to no veterinary
+                        care. By adopting from your local shelter or rescue, you
+                        are giving back to your community instead of helping
+                        cruel breeders profit.
+                      </li>
+                    </ul>
+                  </Modal.Description>
+                </Modal.Content>
+                <Modal.Actions>
+                  <Button color="black" onClick={() => setOpen(false)}>
+                    Close
+                  </Button>
+                  {/* <Button
                   content="Yep, that's me"
                   labelPosition="right"
                   icon="checkmark"
                   onClick={() => setOpen(false)}
                   positive
                 /> */}
-              </Modal.Actions>
-            </Modal>
-          </CardContent>
-        </Card>
-        <div>
-          <Card className="homecards2">
+                </Modal.Actions>
+              </Modal>
+            </CardContent>
+          </Card>
+        </div>
+        <div class="col-md-4">
+          <Card>
             <CardContent>
               <CardDescription>
                 We’re sure you’ve heard that fostering animals in need is
@@ -121,14 +130,12 @@ export default function Home() {
                 involved!
               </CardDescription>
               <Modal
-                onClose={() => setOpen(false)}
-                onOpen={() => setOpen(true)}
-                open={open}
+                onClose={() => setOpen1(false)}
+                onOpen={() => setOpen1(true)}
+                open={open1}
                 trigger={<Button>Learn More</Button>}
               >
-                <Modal.Header>
-                  A Few Reasons to Adopt A Shelter Animal
-                </Modal.Header>
+                <Modal.Header>Fostering</Modal.Header>
                 <Modal.Content image>
                   <Image
                     size="medium"
@@ -199,7 +206,7 @@ export default function Home() {
                   </Modal.Description>
                 </Modal.Content>
                 <Modal.Actions>
-                  <Button color="black" onClick={() => setOpen(false)}>
+                  <Button color="black" onClick={() => setOpen1(false)}>
                     Close
                   </Button>
                   {/* <Button
