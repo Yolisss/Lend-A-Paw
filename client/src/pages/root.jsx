@@ -18,8 +18,7 @@ export default function Root() {
     <div className="App">
       <Navbar />
       <Outlet />
-      <Container className="listitemcard">
-        <h3>Lend A Paw</h3>
+      <Container>
         <Contactinfo />
       </Container>
     </div>
