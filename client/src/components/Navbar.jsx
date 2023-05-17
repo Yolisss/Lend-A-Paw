@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 //import Logo from "../assets/BlueTechtonicaWord.png";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 //Browser router which will actually help connect to the browser
 //routes component which is going to be the parent for all our routes
@@ -14,6 +15,7 @@ import { Link } from "react-router-dom";
 //know the routing system of the router var from app.jsx
 
 function MyNavbar(props) {
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
   return (
     <>
       <Navbar
@@ -44,9 +46,23 @@ function MyNavbar(props) {
           </Link>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Signed in as: <a href="#login">Yolisma Zacarias</a>
-            </Navbar.Text>
+            {isAuthenticated ? (
+              <>
+                <div className="nav-link fst-italic">
+                  Signed in as: {user.email}
+                </div>
+                <button className="btn btn-primary" onClick={() => logout()}>
+                  Log Out
+                </button>
+              </>
+            ) : (
+              <button
+                className="btn btn-primary"
+                onClick={() => loginWithRedirect()}
+              >
+                Log In
+              </button>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
