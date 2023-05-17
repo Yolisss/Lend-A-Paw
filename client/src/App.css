@@ -114,11 +114,10 @@ button.btn.btn-primary {
   flex-direction: column;
 }
 
-.homecards1 {
+.homecards {
   display: flex;
   text-align: center;
   margin: 3rem;
-  float: left;
   width: 25%;
   padding: 0 10px;
 }
