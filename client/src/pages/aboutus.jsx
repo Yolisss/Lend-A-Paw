@@ -4,16 +4,10 @@ import { Container } from "semantic-ui-react";
 export default function Aboutus() {
   return (
     <div>
-      <div
-        className="aboutusimages"
-        style={{
-          backgroundImage:
-            "url(https://d.newsweek.com/en/full/1809693/cat-dog.webp?w=1600&h=900&q=88&f=772f894f001bafc6c5094cc33d71bc19)",
-        }}
-      ></div>
-      <Container>
-        <h3>Where It All Began</h3>
+      <h3 className="aboutustitle1">Where It All Began</h3>
+      <div className="aboutuscontainer">
         <img
+          className="aboutusimage1"
           src="https://www.catster.com/wp-content/uploads/2018/01/Orange-tabby-cat-sleeping-with-eyes-closed.jpg.optimal.jpg"
           width="550px"
         />
@@ -34,7 +28,16 @@ export default function Aboutus() {
           american shorthair mouser. Tom ragdoll or cheetah and malkin himalayan
           malkin.
         </p>
-      </Container>
+      </div>
+
+      <div
+        className="aboutusimages"
+        style={{
+          backgroundImage:
+            "url(https://d.newsweek.com/en/full/1809693/cat-dog.webp?w=1600&h=900&q=88&f=772f894f001bafc6c5094cc33d71bc19)",
+        }}
+      ></div>
+
       <Container>
         <img
           src="https://media.npr.org/assets/img/2021/08/06/dog-4415649-18eab39206426b985f7a5f69e3146a2cd1a56c0d.jpg"
