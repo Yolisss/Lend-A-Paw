@@ -6,17 +6,21 @@ import { Button, Header, Image, Modal } from "semantic-ui-react";
 export default function Home() {
   const [open, setOpen] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
 
   return (
     <div className="container">
-      <div className="homeimage">
-        <img src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" />
+      <div className="p-5">
+        <img
+          src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
+          width="100%"
+        />
       </div>
       <div className="homeparagraph">
         "Saving just one pet won't save the world, but surely it will change the
         world for that one pet."
       </div>
-      <div className="secondhomeimage">
+      <div className="p-5">
         <img
           src="https://www.humanesociety.org/sites/default/files/2018/06/cat-217679.jpg"
           width="100%"
@@ -49,7 +53,7 @@ export default function Home() {
                 </Modal.Header>
                 <Modal.Content image>
                   <Image
-                    size="medium"
+                    size="large"
                     src="https://www.gannett-cdn.com/presto/2021/03/04/PTCN/e24f4e1b-5197-4469-9ffa-3defd8893efd-Texas_Dogs_03.jpg?crop=3000,1688,x0,y123&width=660&height=372&format=pjpg&auto=webp"
                     wrapped
                   />
@@ -118,7 +122,7 @@ export default function Home() {
         </div>
         <div class="col-md-4">
           <Card>
-            <CardContent>
+            <CardContent className="p-4 d-flex flex-column justify-content-center">
               <CardDescription>
                 We’re sure you’ve heard that fostering animals in need is
                 important, and even lifesaving, but do you know why? In honor of
@@ -133,7 +137,11 @@ export default function Home() {
                 onClose={() => setOpen1(false)}
                 onOpen={() => setOpen1(true)}
                 open={open1}
-                trigger={<Button>Learn More</Button>}
+                trigger={
+                  <div className="text-center">
+                    <Button className="mt-4">Learn More</Button>
+                  </div>
+                }
               >
                 <Modal.Header>Fostering</Modal.Header>
                 <Modal.Content image>
@@ -207,6 +215,82 @@ export default function Home() {
                 </Modal.Content>
                 <Modal.Actions>
                   <Button color="black" onClick={() => setOpen1(false)}>
+                    Close
+                  </Button>
+                  {/* <Button
+                  content="Yep, that's me"
+                  labelPosition="right"
+                  icon="checkmark"
+                  onClick={() => setOpen(false)}
+                  positive
+                /> */}
+                </Modal.Actions>
+              </Modal>
+            </CardContent>
+          </Card>
+        </div>
+        <div class="col-md-4">
+          <Card>
+            <CardContent className="p-4 d-flex flex-column justify-content-center">
+              <CardDescription>
+                The people that work at these shelters do a lot for the dogs
+                under their care. That is one reason why you should donate to
+                dog shelters. You are helping your neighbors earn money, help
+                the economy as well as help the many unwanted dogs who did not
+                ask to be there.
+              </CardDescription>
+              <Modal
+                onClose={() => setOpen2(false)}
+                onOpen={() => setOpen2(true)}
+                open={open2}
+                trigger={
+                  <div className="text-center">
+                    <Button className="mt-4">Learn More</Button>
+                  </div>
+                }
+              >
+                <Modal.Header>
+                  Why You Should Donate to Animal Shelters
+                </Modal.Header>
+                <Modal.Content image>
+                  <Image
+                    size="large"
+                    src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
+                    wrapped
+                  />
+                  <Modal.Description>
+                    <ul>
+                      <li>
+                        <h4>1. Houses More Dogs</h4>
+                        Your donations make it possible for these dog shelters
+                        to help more dogs find safety, shelter, and a new home.
+                        The longer a dog can stay in the shelter the better
+                        their chances of finding a new owner they can be a
+                        companion to and protect.
+                      </li>
+                      <li>
+                        <h4>2. Cuts Down on Euthanasion</h4>
+                        Those dog shelters that get donations can avoid the
+                        tragic event of putting unwanted dogs down. This is very
+                        emotional for the shelter workers, something they would
+                        rather avoid.Plus, with the extra funds, they can keep
+                        those dogs longer until a good home is found for them.
+                        Your donation can save dogs as well as spare humans this
+                        emotional time.
+                      </li>
+                      <li>
+                        <h4>3. If You Can't Adopt, You Can Still Help</h4>
+                        That is the bottom line here. Not everyone can adopt a
+                        dog. Their living situations just do not allow it.
+                        However, you can still help by making donations to dog
+                        shelters allowing someone else who can adopt to have the
+                        time to find the right pet for them.
+                      </li>
+                    </ul>
+                  </Modal.Description>
+                </Modal.Content>
+                <Modal.Actions>
+                  <Button color="black" onClick={() => setOpen2(false)}>
                     Close
                   </Button>
                   {/* <Button
