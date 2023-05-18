@@ -104,13 +104,14 @@ button.btn.btn-primary {
 .homeparagraph {
   font-size: 15px;
   padding-left: 20px;
+  padding: 5%;
   margin: 5%;
   text-align: center;
 }
 
 .listitemcard {
   margin: 5%;
-  padding: 10%;
+  padding: 5%;
   text-align: center;
   display: flex;
   justify-content: center;
