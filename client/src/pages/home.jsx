@@ -134,13 +134,17 @@ export default function Home() {
         <div class="col-md-4">
           <Card>
             <CardContent className="p-4 d-flex flex-column justify-content-center">
-              <img src="https://img1.wsimg.com/isteam/ip/9a5a6325-6df0-41ed-a195-fd5ab6ea633e/AF4BFC1D-1716-4230-9366-2F84269AF510.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:1000,cg:true" />
+              <img src="https://bestfriends.org/sites/default/files/inline-files/Pet-fostering-Foster-Kittens-P5290021JW.jpg?nq4Q6OZtwKaL9purD9RoHhm.5qHjhkHU" />
               <br></br>
               <CardDescription>
-                We’re sure you’ve heard that fostering animals in need is
-                important, and even lifesaving, but do you know why? Our top
-                five list below will break down all of the benefits of fostering
-                and explain more on how you can get involved!
+                <h3>You Ever Thought About Fostering?</h3>
+                <br></br>
+                Fostering a pet does not require that you have loads of free
+                time or advanced dog training skills. In fact, most shelters
+                offer foster opportunities that fit your schedule.Are you
+                thinking of fostering a cat or dog from your local shelter or
+                rescue group? Check out our top 5 list of reasons to foster an
+                animal.
               </CardDescription>
               <Modal
                 onClose={() => setOpen1(false)}
@@ -153,7 +157,7 @@ export default function Home() {
                 }
               >
                 <Modal.Header>Fostering</Modal.Header>
-                <Modal.Content image>
+                <Modal.Content>
                   <Image
                     size="medium"
                     src="https://www.aspca.org/sites/default/files/ah_benefits_fostering_main.jpg"
@@ -241,14 +245,16 @@ export default function Home() {
         <div class="col-md-4">
           <Card>
             <CardContent className="p-4 d-flex flex-column justify-content-center">
-              <img src="https://images.contentstack.io/v3/assets/blt6f84e20c72a89efa/blt0dea19c9ca1bfc7e/6261d5d5479b5e559dd84bc2/img-things-donate-animal-shelters-header.jpg" />
+              <img src="https://www.thesprucepets.com/thmb/hxWjs7evF2hP1Fb1c1HAvRi_Rw0=/2765x0/filters:no_upscale():strip_icc()/chinese-dog-breeds-4797219-hero-2a1e9c5ed2c54d00aef75b05c5db399c.jpg" />
               <br></br>
               <CardDescription>
-                The people that work at these shelters do a lot for the dogs
-                under their care. That is one reason why you should donate to
-                dog shelters. You are helping your neighbors earn money, help
-                the economy as well as help the many unwanted dogs who did not
-                ask to be there.
+                <h3>Why You Should Adopt A Dog</h3>
+                <br></br>
+                If you are looking for a reason why you should adopt a dog, I
+                have 5 of them listed here. But honestly, I think there are
+                hundreds of reasons adopting a rescue dog is the right thing to
+                do. And there are probably a hundred more reasons NOT to adopt a
+                dog. So make sure you adopt for the right reasons
               </CardDescription>
               <Modal
                 onClose={() => setOpen2(false)}
@@ -260,42 +266,69 @@ export default function Home() {
                   </div>
                 }
               >
-                <Modal.Header>
-                  Why You Should Donate to Animal Shelters
-                </Modal.Header>
+                <Modal.Header>Adopt A Dog! Why?</Modal.Header>
                 <Modal.Content image>
                   <Image
                     size="large"
-                    src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
+                    src="https://images.unsplash.com/photo-1611003228941-98852ba62227?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZG9nJTIwYmFieXxlbnwwfHwwfHw%3D&w=1000&q=80"
                     wrapped
                   />
                   <Modal.Description>
                     <ul>
                       <li>
-                        <h4>1. Houses More Dogs</h4>
-                        Your donations make it possible for these dog shelters
-                        to help more dogs find safety, shelter, and a new home.
-                        The longer a dog can stay in the shelter the better
-                        their chances of finding a new owner they can be a
-                        companion to and protect.
+                        <h4>1. Adopting a dog will save a dog’s life.</h4>
+                        The number one reason to adopt a dog is that you will be
+                        saving his life. Many shelters are overflowing with dogs
+                        and cats, they sometimes have to turn away animals
+                        simply because they do not have enough room. So when you
+                        adopt your dog, another one can take his place.
                       </li>
                       <li>
-                        <h4>2. Cuts Down on Euthanasion</h4>
-                        Those dog shelters that get donations can avoid the
-                        tragic event of putting unwanted dogs down. This is very
-                        emotional for the shelter workers, something they would
-                        rather avoid.Plus, with the extra funds, they can keep
-                        those dogs longer until a good home is found for them.
-                        Your donation can save dogs as well as spare humans this
-                        emotional time.
+                        <h4>
+                          2. You will never have cold feet in bed on cold winter
+                          nights.
+                        </h4>
+                        Some people don’t want their dogs on the bed with them,
+                        and that’s totally fine. But I love that when I go to
+                        bed my feet are always warm tucked under my 85 pound
+                        yellow lab!
                       </li>
                       <li>
-                        <h4>3. If You Can't Adopt, You Can Still Help</h4>
-                        That is the bottom line here. Not everyone can adopt a
-                        dog. Their living situations just do not allow it.
-                        However, you can still help by making donations to dog
-                        shelters allowing someone else who can adopt to have the
-                        time to find the right pet for them.
+                        <h4>
+                          3. Dog adoption is less expensive than buying a dog
+                          from a breeder or pet store.
+                        </h4>
+                        The benefits of adopting a dog from a shelter are
+                        numerous, cost being a big one. Most humane societies
+                        and rescue organizations will charge $100-$400 for a
+                        dog. With that, you will get a dog that is completely
+                        up-to-date on vaccinations, spayed/neutered, and
+                        sometimes even micro-chipped.
+                      </li>
+                      <li>
+                        <h4>
+                          4. You will encourage other people to adopt a dog by
+                          telling your story.
+                        </h4>
+                        When friends and family hear your wonderful success
+                        story of adopting the dog of your dreams, they may think
+                        about adopting their next dog too! Spread the doggy
+                        love!
+                      </li>
+                      <li>
+                        <h4>5. Fight against puppy mills.</h4>
+                        You should adopt a dog from a reputable shelter and not
+                        buy a puppy from a pet store or on Craigslist, because
+                        you may end up with a puppy mill dog. I think the United
+                        States is starting to finally crack down more on the
+                        puppy mill issue, but they are still out there. Puppy
+                        mill dogs can have a host of health and behavior issues.
+                        You may be one of those unique people that want to save
+                        these dogs, but it can take a lot of money and patience
+                        to truly rehabilitate a puppy mill dog. Some states are
+                        actually passing laws to ban pet stores from selling
+                        dogs, they can only showcase dogs adoptable from local
+                        shelters and rescues.
                       </li>
                     </ul>
                   </Modal.Description>
