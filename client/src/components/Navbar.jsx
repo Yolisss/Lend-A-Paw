@@ -18,12 +18,12 @@ function MyNavbar(props) {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
   return (
     <>
+      <img src={images.logo} alt="" className="lendapaw-logo" width="25%" />
       <Navbar className="navbarstructure" style={{ backgroundColor: "white" }}>
         <Container
           className="navbar"
-          style={{ color: "black", backgroundColor: "#f4c0c0" }}
+          style={{ color: "black", backgroundColor: "#e1c1e0" }}
         >
-          <img src={images.logo} alt="" className="lendapaw-logo" width="30%" />
           <Link to="/" className="nav-link">
             Home
           </Link>
