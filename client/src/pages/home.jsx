@@ -13,7 +13,7 @@ export default function Home() {
       <div className="p-5">
         <img
           src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
-          width="90%"
+          width="70%"
         />
       </div>
       <div className="homeparagraph">
@@ -23,7 +23,7 @@ export default function Home() {
       <div className="p-5">
         <img
           src="https://www.humanesociety.org/sites/default/files/2018/06/cat-217679.jpg"
-          width="90%"
+          width="70%"
         />
       </div>
       <div class="row pt-5">
@@ -129,13 +129,9 @@ export default function Home() {
               <br></br>
               <CardDescription>
                 We’re sure you’ve heard that fostering animals in need is
-                important, and even lifesaving, but do you know why? In honor of
-                Adopt a Shelter Cat Month we’ve teamed up with our friends at
-                ARM & HAMMER Litter’s Feline Generous Program to spread the word
-                on why animal fostering is such a critical part of helping
-                shelter animals. Our top five list below will break down all of
-                the benefits of fostering and explain more on how you can get
-                involved!
+                important, and even lifesaving, but do you know why? Our top
+                five list below will break down all of the benefits of fostering
+                and explain more on how you can get involved!
               </CardDescription>
               <Modal
                 onClose={() => setOpen1(false)}
