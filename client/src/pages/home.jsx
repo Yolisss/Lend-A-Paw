@@ -30,15 +30,14 @@ export default function Home() {
         <div class="col-md-4">
           <Card>
             <CardContent className="p-4 d-flex flex-column justify-content-center">
-              <img src="https://images.squarespace-cdn.com/content/v1/5cd493f1185add0001e4670d/1558988155986-PY602J3JHUN77WUMVRXS/image-asset.jpeg?format=2500w" />
+              <img src="https://www.rd.com/wp-content/uploads/2019/09/Cute-cat-lying-on-his-back-on-the-carpet.-Breed-British-mackerel-with-yellow-eyes-and-a-bushy-mustache.-Close-up-e1573490045672.jpg" />
               <br></br>
               <CardDescription>
-                Deciding to adopt a rescue pet or shelter dog is an important
-                decision. It can be tough to take into account everything you’ll
-                need to be prepared for (both expected and unexpected), but the
-                rewards of adopting a four-legged friend outweigh most concerns
-                and fears many people have concerning adoption. Still not
-                convinced? See our top 5 reasons to adopt:{" "}
+                <h3>Reasons To Adopt A Cat</h3>
+                <br></br>
+                If you have been wanting to add a new feline to your family then
+                adopting is the way to go! There are so many benefits to
+                adopting a cat but here are a few of our favourites:
               </CardDescription>
               <Modal
                 onClose={() => setOpen(false)}
@@ -50,58 +49,68 @@ export default function Home() {
                   </div>
                 }
               >
-                <Modal.Header>
-                  A Few Reasons to Adopt A Shelter Animal
-                </Modal.Header>
+                <Modal.Header>A Few Reasons to Adopt A Cat!</Modal.Header>
                 <Modal.Content image>
                   <Image
                     size="large"
-                    src="https://www.gannett-cdn.com/presto/2021/03/04/PTCN/e24f4e1b-5197-4469-9ffa-3defd8893efd-Texas_Dogs_03.jpg?crop=3000,1688,x0,y123&width=660&height=372&format=pjpg&auto=webp"
+                    src="https://www.treehugger.com/thmb/f8Yki-wOf-GNpYR2H3NCCVsjGGY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/portrait-of-beautiful-white-burmilla-looking-up--black-background-495381097-8202bb60c75949529eb48060044ed0b5.jpg"
                     wrapped
                   />
                   <Modal.Description>
                     <ul>
                       <li>
-                        <h4>1. You're Saving More Than One Life</h4>
-                        It goes without saying that when you adopt a rescue pet,
-                        you’re saving a life—but you’re actually saving more
-                        than one. By adopting, you’re helping make space for
-                        another animal in need and helping to give them the
-                        opportunity to become beloved pets.
+                        <h4>1. You Save Lives</h4>
+                        This is by far the best, most important, and really only
+                        reason you need to adopt a cat! Every year 860,000 (yes,
+                        that many 0’s) cats are euthanized due to lack of space
+                        in shelters and rescue programs. When you adopt a cat
+                        you not only are giving that cat a home but also freeing
+                        space within the shelter for one more animal!
                       </li>
                       <li>
-                        <h4>2. Unconditinal Love! What Could Be Better?</h4>
-                        Many people worry about connecting with a rescued dog,
-                        but shelter dogs have so much love to give—and they
-                        won’t ever stop giving it to you once you let them into
-                        your heart!
+                        <h4>2. It’s a Heck of a Deal!</h4>
+                        When you rescue a cat from a shelter they will often
+                        already be vaccinated (until the vaccines are due in a
+                        year), as well as spayed or neutered already (if a young
+                        adult at the time of adoption). When you purchase a new
+                        kitten you are responsible for the cost of multiple
+                        office visits to the vets for vaccines, as well as their
+                        spay/neuter procedure when they are of age. Rescues and
+                        shelters are able to offer their cats for a reasonable
+                        adoption fee that can save you hundreds of dollars in
+                        the first year of that cat’s life!
                       </li>
                       <li>
                         <h4>
-                          3.You're Giving A Second Chance to a Deserving Animal
+                          3. You Will Have a Good Idea of the Adopted Cat’s
+                          Personality
                         </h4>
-                        Beyond just helping an animal in need, you’re giving a
-                        rescue an opportunity to find their voice; to be
-                        themselves and get a second chance to become a dog
-                        beyond the walls of shelter or rescue. You truly give
-                        them the keys to start anew in a life where second
-                        chances can often be hard to come by
+                        These cats in shelters and rescues are cared for daily
+                        by volunteers and workers. These individuals get to know
+                        the cat’s personality, likes and dislikes, and if they
+                        will have any specific needs from their new owners once
+                        they get adopted. This way when you ask about a cat,
+                        they can point out the ones that fit your wish list.
+                        Whether you want a couch potato or a lively playful cat,
+                        a shelter is sure to have what you are looking for in a
+                        feline friend.
                       </li>
                       <li>
-                        <h4>4. You Get a Chance to Stay Actice</h4>
-                        Maybe you’re trying to live a more active lifestyle, or
-                        maybe you’re just looking for a new adventure. Either
-                        way, a new four-legged friend gives you a reason to get
-                        outdoors more and stretch your legs!
+                        <h4>4. Your Mental Health will Benefit</h4>
+                        Multiple studies show that adopting a cat (or any animal
+                        from a shelter) has a positive impact on the new owner’s
+                        ability to cope with stress, depression, anxiety, and
+                        loneliness. You will enjoy your new sense of happiness
+                        and well-being, taking a cat home from the shelter IS
+                        the best medicine!
                       </li>
                       <li>
-                        <h4>5. You're Fighting Back Agains Cruel Breeding</h4>
-                        Puppies purchased at pet stores almost always come from
-                        cruel breeding facilities where dogs are confined to
-                        small, filthy spaces and receive little to no veterinary
-                        care. By adopting from your local shelter or rescue, you
-                        are giving back to your community instead of helping
-                        cruel breeders profit.
+                        <h4>5. Cats are Good for Your Heart</h4>A recent study
+                        found that owning a cat may lead to a reduced risk of
+                        death from cardiovascular disease and stroke. This is an
+                        important finding considering the AHA/ASA says, “Stroke
+                        is the number 3 cause of death in women and number 4
+                        cause of death in men.
                       </li>
                     </ul>
                   </Modal.Description>
