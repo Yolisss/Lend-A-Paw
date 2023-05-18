@@ -10,12 +10,14 @@ export default function Waystohelp() {
   const [open2, setOpen2] = React.useState(false);
   return (
     <div>
-      <Container>
-        <img
-          src="https://www.aspca.org/sites/default/files/crc-volunteer-page-img.jpg"
-          width="650px"
-        />
-      </Container>
+      <div
+        className="homeimages"
+        style={{
+          backgroundImage:
+            "url(https://www.rd.com/wp-content/uploads/2018/10/15-Surprising-Benefits-of-Adopting-a-Shelter-Dog-14.jpg)",
+        }}
+      ></div>
+
       <Container>
         <p>"All is paws-ible when you rescue a friend."</p>
       </Container>
