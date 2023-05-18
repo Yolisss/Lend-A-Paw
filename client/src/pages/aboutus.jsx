@@ -29,7 +29,6 @@ export default function Aboutus() {
           malkin.
         </p>
       </div>
-
       <div
         className="aboutusimages"
         style={{
@@ -38,14 +37,8 @@ export default function Aboutus() {
         }}
       ></div>
 
-      <Container>
-        <img
-          src="https://media.npr.org/assets/img/2021/08/06/dog-4415649-18eab39206426b985f7a5f69e3146a2cd1a56c0d.jpg"
-          width="550px"
-        />
-      </Container>
-      <Container>
-        <h3>Our Mission</h3>
+      <h3 className="aboutustitle2">Our Mission</h3>
+      <div className="aboutuscontainer2">
         <p>
           Walk on keyboard bite plants. Sleep nap. Lick master's hand at first
           then bite because im moody. Love blinks and purr purr purr purr yawn
@@ -61,7 +54,12 @@ export default function Aboutus() {
           when give birth so cough furball into food bowl then scratch owner for
           a new one, or time to go zooooom rub my belly hiss.{" "}
         </p>
-      </Container>
+        <img
+          className="aboutusimage2"
+          src="https://media.npr.org/assets/img/2021/08/06/dog-4415649-18eab39206426b985f7a5f69e3146a2cd1a56c0d.jpg"
+          width="550px"
+        />
+      </div>
     </div>
   );
 }
