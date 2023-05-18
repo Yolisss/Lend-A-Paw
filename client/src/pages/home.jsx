@@ -31,6 +31,7 @@ export default function Home() {
           <Card>
             <CardContent className="p-4 d-flex flex-column justify-content-center">
               <img src="https://images.squarespace-cdn.com/content/v1/5cd493f1185add0001e4670d/1558988155986-PY602J3JHUN77WUMVRXS/image-asset.jpeg?format=2500w" />
+              <br></br>
               <CardDescription>
                 Deciding to adopt a rescue pet or shelter dog is an important
                 decision. It can be tough to take into account everything you’ll
@@ -124,6 +125,8 @@ export default function Home() {
         <div class="col-md-4">
           <Card>
             <CardContent className="p-4 d-flex flex-column justify-content-center">
+              <img src="https://img1.wsimg.com/isteam/ip/9a5a6325-6df0-41ed-a195-fd5ab6ea633e/AF4BFC1D-1716-4230-9366-2F84269AF510.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:1000,cg:true" />
+              <br></br>
               <CardDescription>
                 We’re sure you’ve heard that fostering animals in need is
                 important, and even lifesaving, but do you know why? In honor of
@@ -233,6 +236,8 @@ export default function Home() {
         <div class="col-md-4">
           <Card>
             <CardContent className="p-4 d-flex flex-column justify-content-center">
+              <img src="https://images.contentstack.io/v3/assets/blt6f84e20c72a89efa/blt0dea19c9ca1bfc7e/6261d5d5479b5e559dd84bc2/img-things-donate-animal-shelters-header.jpg" />
+              <br></br>
               <CardDescription>
                 The people that work at these shelters do a lot for the dogs
                 under their care. That is one reason why you should donate to
