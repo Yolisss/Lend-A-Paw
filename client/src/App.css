@@ -158,6 +158,24 @@ button.btn.btn-primary {
   text-align: center;
 }
 
+.aboutuscontainer2 {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdd9b;
+}
+
+.aboutusimage2 {
+  padding: 50px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.aboutustitle2 {
+  text-align: center;
+}
+
 /* .container {
   display: flex;
   align-items: center;
