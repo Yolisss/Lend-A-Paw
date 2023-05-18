@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background-color: rgb(238, 232, 232);
+  background-color: white;
   margin: 5px;
 }
 
@@ -102,10 +102,11 @@ button.btn.btn-primary {
 }
 
 .homeparagraph {
+  background-color: "white";
   font-size: 15px;
-  padding-left: 20px;
-  padding: 5%;
-  margin: 5%;
+  /* padding-left: 20px; */
+  padding: 3%;
+  margin: 3%;
   text-align: center;
 }
 
@@ -127,6 +128,9 @@ button.btn.btn-primary {
 }
 .navbar {
   color: black;
+}
+.container {
+  background-color: white;
 }
 
 /* .container {
