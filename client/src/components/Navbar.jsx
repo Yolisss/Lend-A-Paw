@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import images from "../images/images";
 //Browser router which will actually help connect to the browser
 //routes component which is going to be the parent for all our routes
 //route, used to set up a single page
@@ -18,20 +18,12 @@ function MyNavbar(props) {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
   return (
     <>
-      <Navbar
-        className="navbarstructure"
-        style={{ backgroundColor: "lightgray" }}
-      >
-        <Container className="navbar" style={{ backgroundColor: "lightgray" }}>
-          {/* <Navbar.Brand href="/">
-            <img
-              src={Logo}
-              height="30"
-              className="d-lg-inline-block"
-              alt="React Bootstrap logo"
-            />
-          </Navbar.Brand> */}
-          <h1>Lend A Paw</h1>
+      <Navbar className="navbarstructure" style={{ backgroundColor: "white" }}>
+        <Container
+          className="navbar"
+          style={{ color: "black", backgroundColor: "#f4c0c0" }}
+        >
+          <img src={images.logo} alt="" className="lendapaw-logo" width="30%" />
           <Link to="/" className="nav-link">
             Home
           </Link>
@@ -71,37 +63,3 @@ function MyNavbar(props) {
 }
 
 export default MyNavbar;
-
-// import Container from 'react-bootstrap/Container';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
-// import Logo from '../assets/BlueTechtonicaWord.png'
-
-// function MyNavBar(props) {
-
-//   return (
-//     <>
-//     <Navbar data-testid="navbar" bg="dark" variant="dark" sticky="top">
-//       <Container>
-//         <Navbar.Brand href="/">
-//         <img
-//               src={Logo}
-//               height="30"
-//               className="d-lg-inline-block"
-//               alt="React Bootstrap logo"
-//             />
-//         </Navbar.Brand>
-//         <Nav.Link >Your Link</Nav.Link>
-//         <Navbar.Toggle />
-//         <Navbar.Collapse className="justify-content-end">
-//           <Navbar.Text>
-//             Signed in as: <a href="#login">Cristina Rodriguez</a>
-//           </Navbar.Text>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//     </>
-//   );
-// };
-
-// export default MyNavBar;
