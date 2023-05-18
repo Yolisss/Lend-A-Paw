@@ -37,9 +37,9 @@ export default function Aboutus() {
         }}
       ></div>
 
-      <h3 className="aboutustitle2">Our Mission</h3>
       <div className="aboutuscontainer2">
         <p>
+          <h3 className="aboutustitle2">Our Mission</h3>
           Walk on keyboard bite plants. Sleep nap. Lick master's hand at first
           then bite because im moody. Love blinks and purr purr purr purr yawn
           sit on human they not getting up ever and murr i hate humans they are
