@@ -13,7 +13,7 @@ export default function Home() {
       <div className="p-5">
         <img
           src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
-          width="100%"
+          width="90%"
         />
       </div>
       <div className="homeparagraph">
@@ -23,13 +23,14 @@ export default function Home() {
       <div className="p-5">
         <img
           src="https://www.humanesociety.org/sites/default/files/2018/06/cat-217679.jpg"
-          width="100%"
+          width="90%"
         />
       </div>
-      <div class="row">
+      <div class="row pt-5">
         <div class="col-md-4">
           <Card>
             <CardContent className="p-4 d-flex flex-column justify-content-center">
+              <img src="https://images.squarespace-cdn.com/content/v1/5cd493f1185add0001e4670d/1558988155986-PY602J3JHUN77WUMVRXS/image-asset.jpeg?format=2500w" />
               <CardDescription>
                 Deciding to adopt a rescue pet or shelter dog is an important
                 decision. It can be tough to take into account everything you’ll
