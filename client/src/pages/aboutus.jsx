@@ -4,7 +4,6 @@ import { Container } from "semantic-ui-react";
 export default function Aboutus() {
   return (
     <div>
-      <h3 className="aboutustitle1">Where It All Began</h3>
       <div className="aboutuscontainer">
         <img
           className="aboutusimage1"
@@ -12,6 +11,7 @@ export default function Aboutus() {
           width="550px"
         />
         <p>
+          <h3 className="aboutustitle1">Where It All Began</h3>
           Cat ipsum dolor sit amet, malkin for siamese for abyssinian . Tiger
           havana brown so kitty lynx. Bengal tomcat sphynx so abyssinian and
           bombay but egyptian mau. Panther cornish rex and bombay or malkin, so
