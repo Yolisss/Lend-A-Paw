@@ -4,20 +4,14 @@ import { Container } from "semantic-ui-react";
 export default function Aboutus() {
   return (
     <div>
-      <Container>
+      <div className="aboutuscontainer">
         <img
-          src="https://d.newsweek.com/en/full/1809693/cat-dog.webp?w=1600&h=900&q=88&f=772f894f001bafc6c5094cc33d71bc19"
-          width="550px"
-          background-size:cover="true"
-        />
-      </Container>
-      <Container>
-        <h3>Where It All Began</h3>
-        <img
+          className="aboutusimage1"
           src="https://www.catster.com/wp-content/uploads/2018/01/Orange-tabby-cat-sleeping-with-eyes-closed.jpg.optimal.jpg"
           width="550px"
         />
         <p>
+          <h3 className="aboutustitle1">Where It All Began</h3>
           Cat ipsum dolor sit amet, malkin for siamese for abyssinian . Tiger
           havana brown so kitty lynx. Bengal tomcat sphynx so abyssinian and
           bombay but egyptian mau. Panther cornish rex and bombay or malkin, so
@@ -34,16 +28,18 @@ export default function Aboutus() {
           american shorthair mouser. Tom ragdoll or cheetah and malkin himalayan
           malkin.
         </p>
-      </Container>
-      <Container>
-        <img
-          src="https://media.npr.org/assets/img/2021/08/06/dog-4415649-18eab39206426b985f7a5f69e3146a2cd1a56c0d.jpg"
-          width="550px"
-        />
-      </Container>
-      <Container>
-        <h3>Our Mission</h3>
+      </div>
+      <div
+        className="aboutusimages"
+        style={{
+          backgroundImage:
+            "url(https://d.newsweek.com/en/full/1809693/cat-dog.webp?w=1600&h=900&q=88&f=772f894f001bafc6c5094cc33d71bc19)",
+        }}
+      ></div>
+
+      <div className="aboutuscontainer2">
         <p>
+          <h3 className="aboutustitle2">Our Mission</h3>
           Walk on keyboard bite plants. Sleep nap. Lick master's hand at first
           then bite because im moody. Love blinks and purr purr purr purr yawn
           sit on human they not getting up ever and murr i hate humans they are
@@ -58,7 +54,12 @@ export default function Aboutus() {
           when give birth so cough furball into food bowl then scratch owner for
           a new one, or time to go zooooom rub my belly hiss.{" "}
         </p>
-      </Container>
+        <img
+          className="aboutusimage2"
+          src="https://media.npr.org/assets/img/2021/08/06/dog-4415649-18eab39206426b985f7a5f69e3146a2cd1a56c0d.jpg"
+          width="550px"
+        />
+      </div>
     </div>
   );
 }
