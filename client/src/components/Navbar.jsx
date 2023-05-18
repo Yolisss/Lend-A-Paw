@@ -22,8 +22,8 @@ function MyNavbar(props) {
         <img
           src={images.logo}
           alt=""
-          className="lendapaw-logo"
-          style={{ margin: "auto", width: "25%", textAlign: "center" }}
+          className="lendapaw-logo m-auto text-center"
+          style={{ width: "25%" }}
         />
       </div>
       <Navbar
@@ -31,21 +31,26 @@ function MyNavbar(props) {
         style={{ backgroundColor: "#e1c1e0", marginBottom: "100px" }}
       >
         <Container
-          className="navbar"
-          style={{ color: "black", backgroundColor: "#e1c1e0" }}
+          style={{
+            color: "black",
+            backgroundColor: "#e1c1e0",
+          }}
         >
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
-          <Link to="/aboutus" className="nav-link">
-            About Us
-          </Link>
-          <Link to="/adoptablepets" className="nav-link">
-            Adoptable Pets
-          </Link>
-          <Link to="/waystohelp" className="nav-link">
-            Ways To Help
-          </Link>
+          <div className="d-flex flex-row align-items-center">
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/aboutus" className="nav-link">
+              About Us
+            </Link>
+            <Link to="/adoptablepets" className="nav-link">
+              Adoptable Pets
+            </Link>
+            <Link to="/waystohelp" className="nav-link">
+              Ways To Help
+            </Link>
+          </div>
+
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             {isAuthenticated ? (
@@ -60,7 +65,7 @@ function MyNavbar(props) {
             ) : (
               <button
                 className="btn btn-primary"
-                style={{ backgroundColor: "pink" }}
+                style={{ backgroundColor: "pink", borderColor: "pink" }}
                 onClick={() => loginWithRedirect()}
               >
                 Log In
