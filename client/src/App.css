@@ -140,6 +140,24 @@ button.btn.btn-primary {
   background-position: center;
 }
 
+.aboutuscontainer {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #c5efed;
+}
+
+.aboutusimage1 {
+  padding: 50px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.aboutustitle1 {
+  text-align: center;
+}
+
 /* .container {
   display: flex;
   align-items: center;
