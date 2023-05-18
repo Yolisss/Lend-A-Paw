@@ -4,13 +4,13 @@ import { Container } from "semantic-ui-react";
 export default function Aboutus() {
   return (
     <div>
-      <Container>
-        <img
-          src="https://d.newsweek.com/en/full/1809693/cat-dog.webp?w=1600&h=900&q=88&f=772f894f001bafc6c5094cc33d71bc19"
-          width="550px"
-          background-size:cover="true"
-        />
-      </Container>
+      <div
+        className="aboutusimages"
+        style={{
+          backgroundImage:
+            "url(https://d.newsweek.com/en/full/1809693/cat-dog.webp?w=1600&h=900&q=88&f=772f894f001bafc6c5094cc33d71bc19)",
+        }}
+      ></div>
       <Container>
         <h3>Where It All Began</h3>
         <img
