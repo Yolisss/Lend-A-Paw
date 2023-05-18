@@ -1,5 +1,5 @@
 import React from "react";
-import { Placeholder } from "semantic-ui-react";
+import { Placeholder, Image } from "semantic-ui-react";
 
 export default function Catordog(props) {
   let image =
@@ -11,7 +11,7 @@ export default function Catordog(props) {
   return (
     <div>
       <Placeholder>
-        <img src={image} width="150px" />
+        <Image src={image} size="small" />
       </Placeholder>
     </div>
   );
