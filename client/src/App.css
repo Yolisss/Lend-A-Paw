@@ -133,6 +133,13 @@ button.btn.btn-primary {
   background-color: rgb(234, 183, 183);
 }
 
+.aboutusimages {
+  height: 30em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /* .container {
   display: flex;
   align-items: center;
