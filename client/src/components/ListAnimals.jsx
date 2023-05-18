@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card } from "semantic-ui-react";
+import { Card, Button, Image } from "semantic-ui-react";
 //import * as ioicons from "react-icons/io5";
 import AdoptionForm from "./Form";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 const ListAnimals = (props) => {
   // this is my original state with an array of students
   const [animals, setAnimals] = useState([]);
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
   //this is the state needed for the UpdateRequest
   //const [editingStudent, setEditingStudent] = useState(null);
@@ -67,40 +67,44 @@ const ListAnimals = (props) => {
     <div className="mybody">
       <div className="list-students">
         <h2>Meet Our Adoptable Pets </h2>
-        <ul>
+        <Card.Group itemsPerRow={3} centered>
           {animals.map((animal, index) => {
             return (
-              <Card key={index}>
+              <Card key={index} centered>
+                {animal.photos.length === 0 ? (
+                  <Catordog species={animal.species} />
+                ) : (
+                  <Image src={animal.photos[0].full} size="small" centered />
+                )}
                 <Card.Content>
-                  <li>
-                    {animal.name}
-                    {animal.photos.length === 0 ? (
-                      <Catordog species={animal.species} />
-                    ) : (
-                      <img src={animal.photos[0].small} />
-                    )}
-                    ,{animal.species}
-                    {animal.description}
+                  <Card.Header>{animal.name}</Card.Header>
+                  <Card.Meta>{animal.species}</Card.Meta>
+                  <Card.Description>{animal.description}</Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  {isAuthenticated ? (
                     <Link to={`/adopt/${animal.id}`}>Adopt</Link>
-                    {/* {isAuthenticated ? (
-                      <Link to={`/adopt/${animal.id}`}>Adopt</Link>
-                    ) : (
-                      <button onClick={() => loginWithRedirect()}>
-                        Log In
-                      </button>
-                    )} */}
-                    {/* <button onClick={() => props.setId(animal.id)}>
-                      Adopt!
-                    </button> */}
-                  </li>
+                  ) : (
+                    <Button onClick={() => loginWithRedirect()}>Log In</Button>
+                  )}
                 </Card.Content>
               </Card>
             );
           })}
-        </ul>
+        </Card.Group>
       </div>
     </div>
   );
 };
 
 export default ListAnimals;
+
+{
+  /* <Link to={`/adopt/${animal.id}`}>Adopt</Link>; */
+}
+
+{
+  /* <button onClick={() => props.setId(animal.id)}>
+                      Adopt!
+                    </button>*/
+}

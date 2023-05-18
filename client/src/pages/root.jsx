@@ -17,9 +17,10 @@ export default function Root() {
   return (
     <div className="App">
       <Navbar />
-      <Outlet />
+      <div>
+        <Outlet />
+      </div>
       <Container>
-        <h3>Lend A Paw</h3>
         <Contactinfo />
       </Container>
     </div>

@@ -4,7 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 //import Logo from "../assets/BlueTechtonicaWord.png";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { useAuth0 } from "@auth0/auth0-react";
+import images from "../images/images";
 //Browser router which will actually help connect to the browser
 //routes component which is going to be the parent for all our routes
 //route, used to set up a single page
@@ -14,22 +15,25 @@ import { Link } from "react-router-dom";
 //know the routing system of the router var from app.jsx
 
 function MyNavbar(props) {
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
   return (
     <>
+      <div style={{ display: "flex", backgroundColor: "#e1c1e0" }}>
+        <img
+          src={images.logo}
+          alt=""
+          className="lendapaw-logo"
+          style={{ margin: "auto", width: "25%", textAlign: "center" }}
+        />
+      </div>
       <Navbar
         className="navbarstructure"
-        style={{ backgroundColor: "lightgray" }}
+        style={{ backgroundColor: "#e1c1e0", marginBottom: "100px" }}
       >
-        <Container className="navbar" style={{ backgroundColor: "lightgray" }}>
-          {/* <Navbar.Brand href="/">
-            <img
-              src={Logo}
-              height="30"
-              className="d-lg-inline-block"
-              alt="React Bootstrap logo"
-            />
-          </Navbar.Brand> */}
-          <h1>Lend A Paw</h1>
+        <Container
+          className="navbar"
+          style={{ color: "black", backgroundColor: "#e1c1e0" }}
+        >
           <Link to="/" className="nav-link">
             Home
           </Link>
@@ -44,9 +48,24 @@ function MyNavbar(props) {
           </Link>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Signed in as: <a href="#login">Yolisma Zacarias</a>
-            </Navbar.Text>
+            {isAuthenticated ? (
+              <>
+                <div className="nav-link fst-italic">
+                  Signed in as: {user.email}
+                </div>
+                <button className="btn btn-primary" onClick={() => logout()}>
+                  Log Out
+                </button>
+              </>
+            ) : (
+              <button
+                className="btn btn-primary"
+                style={{ backgroundColor: "pink" }}
+                onClick={() => loginWithRedirect()}
+              >
+                Log In
+              </button>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -55,37 +74,3 @@ function MyNavbar(props) {
 }
 
 export default MyNavbar;
-
-// import Container from 'react-bootstrap/Container';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
-// import Logo from '../assets/BlueTechtonicaWord.png'
-
-// function MyNavBar(props) {
-
-//   return (
-//     <>
-//     <Navbar data-testid="navbar" bg="dark" variant="dark" sticky="top">
-//       <Container>
-//         <Navbar.Brand href="/">
-//         <img
-//               src={Logo}
-//               height="30"
-//               className="d-lg-inline-block"
-//               alt="React Bootstrap logo"
-//             />
-//         </Navbar.Brand>
-//         <Nav.Link >Your Link</Nav.Link>
-//         <Navbar.Toggle />
-//         <Navbar.Collapse className="justify-content-end">
-//           <Navbar.Text>
-//             Signed in as: <a href="#login">Cristina Rodriguez</a>
-//           </Navbar.Text>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//     </>
-//   );
-// };
-
-// export default MyNavBar;
