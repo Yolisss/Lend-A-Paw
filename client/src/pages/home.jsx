@@ -11,9 +11,10 @@ export default function Home() {
   return (
     <div className="container">
       <div className="p-5">
-        <img
+        <Image
           src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
-          width="70%"
+          style={{ width: "70%" }}
+          centered
         />
       </div>
       <div className="homeparagraph">
@@ -21,9 +22,10 @@ export default function Home() {
         world for that one pet."
       </div>
       <div className="p-5">
-        <img
+        <Image
           src="https://www.humanesociety.org/sites/default/files/2018/06/cat-217679.jpg"
-          width="70%"
+          style={{ width: "70%" }}
+          centered
         />
       </div>
       <div class="row pt-5">
@@ -45,7 +47,12 @@ export default function Home() {
                 open={open}
                 trigger={
                   <div className="text-center">
-                    <Button className="mt-4">Learn More</Button>
+                    <Button
+                      className="mt-4"
+                      style={{ backgroundColor: "pink" }}
+                    >
+                      Learn More
+                    </Button>
                   </div>
                 }
               >
@@ -152,7 +159,12 @@ export default function Home() {
                 open={open1}
                 trigger={
                   <div className="text-center">
-                    <Button className="mt-4">Learn More</Button>
+                    <Button
+                      className="mt-4"
+                      style={{ backgroundColor: "pink" }}
+                    >
+                      Learn More
+                    </Button>
                   </div>
                 }
               >
@@ -262,7 +274,12 @@ export default function Home() {
                 open={open2}
                 trigger={
                   <div className="text-center">
-                    <Button className="mt-4">Learn More</Button>
+                    <Button
+                      className="mt-4"
+                      style={{ backgroundColor: "pink" }}
+                    >
+                      Learn More
+                    </Button>
                   </div>
                 }
               >
