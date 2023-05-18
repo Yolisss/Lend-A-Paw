@@ -90,11 +90,11 @@ button.btn.btn-primary {
   align-items: center;
   justify-content: center; */
 
-.homeimage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5%;
+.homeimages {
+  height: 30em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .secondhomeimage {
