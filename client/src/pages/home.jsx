@@ -9,25 +9,25 @@ export default function Home() {
   const [open2, setOpen2] = React.useState(false);
 
   return (
-    <div className="container">
-      <div className="p-5">
-        <Image
-          src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
-          style={{ width: "70%" }}
-          centered
-        />
-      </div>
+    <div>
+      <div
+        className="homeimages"
+        style={{
+          backgroundImage:
+            "url(https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg)",
+        }}
+      ></div>
       <div className="homeparagraph">
         "Saving just one pet won't save the world, but surely it will change the
         world for that one pet."
       </div>
-      <div className="p-5">
-        <Image
-          src="https://www.humanesociety.org/sites/default/files/2018/06/cat-217679.jpg"
-          style={{ width: "70%" }}
-          centered
-        />
-      </div>
+      <div
+        className="homeimages"
+        style={{
+          backgroundImage:
+            "url(https://www.humanesociety.org/sites/default/files/2018/06/cat-217679.jpg)",
+        }}
+      ></div>
       <div class="row pt-5">
         <div class="col-md-4">
           <Card>
