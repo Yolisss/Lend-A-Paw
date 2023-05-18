@@ -60,6 +60,7 @@ function MyNavbar(props) {
             ) : (
               <button
                 className="btn btn-primary"
+                style={{ backgroundColor: "pink" }}
                 onClick={() => loginWithRedirect()}
               >
                 Log In
