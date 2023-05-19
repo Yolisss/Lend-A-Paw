@@ -187,21 +187,33 @@ button.btn.btn-primary {
 
 .waystohelpimages1 {
   height: 20em;
+  padding: 100px;
   /* background-size: cover;
   background-position: center;
   background-repeat: no-repeat; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #ffdd9b;
 }
 
 .waystohelpcontent2 {
   text-align: center;
+  background-color: #ffdd9b;
 }
 
 .waystohelpimage2 {
   text-align: center;
+  background-color: lightsteelblue;
+  padding: 80px;
 }
+
+.waystohelpparag {
+  text-align: center;
+  padding: 100px;
+  background-color: #c5efed;
+}
+
 /* .container {
   display: flex;
   align-items: center;
