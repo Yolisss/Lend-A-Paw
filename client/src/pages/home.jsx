@@ -15,6 +15,10 @@ export default function Home() {
         style={{
           backgroundImage:
             "url(https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg)",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          objectFit: "contain",
         }}
       ></div>
       <div className="homeparagraph">

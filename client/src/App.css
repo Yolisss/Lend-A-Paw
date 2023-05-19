@@ -92,6 +92,8 @@ button.btn.btn-primary {
 
 .homeimages {
   height: 30em;
+  max-height: 50%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -176,6 +178,41 @@ button.btn.btn-primary {
 .aboutustitle2 {
   text-align: center;
   padding: 40px;
+}
+
+.waystohelpquote1 {
+  background-color: lightgoldenrodyellow;
+  padding: 150px;
+  text-align: center;
+}
+
+.waystohelpimages1 {
+  height: 20em;
+  padding: 100px;
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffdd9b;
+}
+
+.waystohelpcontent2 {
+  text-align: center;
+  background-color: #ffdd9b;
+}
+
+.waystohelpimage2 {
+  text-align: center;
+  background-color: lightsteelblue;
+  padding: 60px;
+}
+
+.waystohelpparag {
+  text-align: center;
+  padding: 100px;
+  background-color: #c5efed;
 }
 
 /* .container {
