@@ -215,6 +215,11 @@ button.btn.btn-primary {
   background-color: #c5efed;
 }
 
+.intropargadoptpets {
+  text-align: center;
+  padding: 70px 300px;
+}
+
 /* .container {
   display: flex;
   align-items: center;
