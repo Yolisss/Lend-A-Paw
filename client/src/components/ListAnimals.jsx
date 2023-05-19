@@ -81,7 +81,7 @@ const ListAnimals = (props) => {
                   <Card.Meta>{animal.species}</Card.Meta>
                   <Card.Description>{animal.description}</Card.Description>
                 </Card.Content>
-                <Card.Content extra>
+                <Card.Content>
                   {isAuthenticated ? (
                     <Link to={`/adopt/${animal.id}`}>Adopt</Link>
                   ) : (
