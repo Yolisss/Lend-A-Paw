@@ -195,6 +195,13 @@ button.btn.btn-primary {
   background-repeat: no-repeat;
 }
 
+.waystohelpcontent2 {
+  text-align: center;
+}
+
+.waystohelpimage2 {
+  text-align: center;
+}
 /* .container {
   display: flex;
   align-items: center;
