@@ -220,6 +220,12 @@ button.btn.btn-primary {
   padding: 70px 300px;
 }
 
+.adoptablepetspic1 {
+  text-align: center;
+  background-color: lightsteelblue;
+  padding: 60px;
+}
+
 /* .container {
   display: flex;
   align-items: center;
