@@ -24,9 +24,20 @@ export default function Adoptablepets() {
           sunt, velit so ratione. Eu ratione. Vel pariatur.
         </p>
       </div>
-      <div className="adoptablepetspic1">
+      <div className="adoptablepetspic1 container-fuild pt-3">
         <img
-          src="https://www.travelandleisure.com/thmb/EX2GMaNj47Cd0nCTiKMW205mCWQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/kitten-litter-cat-names-CATNAMES0521-338c6363384c46af850c71f57c66559d.jpg"
+          className="col-md-4"
+          src="https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2F0JTIwYW5kJTIwZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+          width="550px"
+        />
+        <img
+          className="col-md-4"
+          src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+          width="550px"
+        />
+        <img
+          className="col-md-4"
+          src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhdCUyMGFuZCUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
           width="550px"
         />
       </div>
