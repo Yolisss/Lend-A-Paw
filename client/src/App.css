@@ -181,7 +181,8 @@ button.btn.btn-primary {
 }
 
 .waystohelpquote1 {
-  padding: 100px;
+  background-color: lightgoldenrodyellow;
+  padding: 150px;
   text-align: center;
 }
 
@@ -205,7 +206,7 @@ button.btn.btn-primary {
 .waystohelpimage2 {
   text-align: center;
   background-color: lightsteelblue;
-  padding: 80px;
+  padding: 60px;
 }
 
 .waystohelpparag {
