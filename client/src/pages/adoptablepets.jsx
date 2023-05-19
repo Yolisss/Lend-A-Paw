@@ -24,7 +24,7 @@ export default function Adoptablepets() {
           sunt, velit so ratione. Eu ratione. Vel pariatur.
         </p>
       </div>
-      <div>
+      <div className="adoptablepetspic1">
         <img
           src="https://www.travelandleisure.com/thmb/EX2GMaNj47Cd0nCTiKMW205mCWQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/kitten-litter-cat-names-CATNAMES0521-338c6363384c46af850c71f57c66559d.jpg"
           width="550px"
