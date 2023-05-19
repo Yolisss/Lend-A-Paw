@@ -10,7 +10,8 @@ export default function Adoptablepets() {
 
   return (
     <div>
-      <div>
+      <div className="intropargadoptpets">
+        <h3>Meet Our Adoptable Pets!</h3>
         <p>
           Adipisicing error fugit and occaecat dolorem. Ab autem incididunt or
           ea veritatis for pariatur. Nulla iure yet commodi consequatur
