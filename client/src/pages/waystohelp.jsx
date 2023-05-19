@@ -267,82 +267,85 @@ export default function Waystohelp() {
         </Card>
 
         <Card>
-          <CardContent className="p-4 d-flex flex-column justify-content-center">
-            <img
-              src="https://images.contentstack.io/v3/assets/blt6f84e20c72a89efa/blt0dea19c9ca1bfc7e/6261d5d5479b5e559dd84bc2/img-things-donate-animal-shelters-header.jpg"
-              width="50%"
-            />
-            <br></br>
-            <CardDescription style={{ textAlign: "center", padding: "40px" }}>
-              The people that work at these shelters do a lot for the dogs under
-              their care. That is one reason why you should donate to dog
-              shelters. You are helping your neighbors earn money, help the
-              economy as well as help the many unwanted dogs who did not ask to
-              be there.
-            </CardDescription>
-            <Modal
-              onClose={() => setOpen2(false)}
-              onOpen={() => setOpen2(true)}
-              open={open2}
-              trigger={
-                <div className="text-center">
-                  <Button className="mt-4">Learn More About Donating</Button>
-                </div>
-              }
-            >
-              <Modal.Header>
-                Why You Should Donate to Animal Shelters
-              </Modal.Header>
-              <Modal.Content image>
-                <Image
-                  size="large"
-                  src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
-                  wrapped
-                />
-                <Modal.Description>
-                  <ul>
-                    <li>
-                      <h4>1. Houses More Dogs</h4>
-                      Your donations make it possible for these dog shelters to
-                      help more dogs find safety, shelter, and a new home. The
-                      longer a dog can stay in the shelter the better their
-                      chances of finding a new owner they can be a companion to
-                      and protect.
-                    </li>
-                    <li>
-                      <h4>2. Cuts Down on Euthanasion</h4>
-                      Those dog shelters that get donations can avoid the tragic
-                      event of putting unwanted dogs down. This is very
-                      emotional for the shelter workers, something they would
-                      rather avoid.Plus, with the extra funds, they can keep
-                      those dogs longer until a good home is found for them.
-                      Your donation can save dogs as well as spare humans this
-                      emotional time.
-                    </li>
-                    <li>
-                      <h4>3. If You Can't Adopt, You Can Still Help</h4>
-                      That is the bottom line here. Not everyone can adopt a
-                      dog. Their living situations just do not allow it.
-                      However, you can still help by making donations to dog
-                      shelters allowing someone else who can adopt to have the
-                      time to find the right pet for them.
-                    </li>
-                  </ul>
-                </Modal.Description>
-              </Modal.Content>
-              <Modal.Actions>
-                <Button color="black" onClick={() => setOpen2(false)}>
-                  Close
-                </Button>
-                {/* <Button
+          <CardContent className="p-4 row align-items-centerr">
+            <div className="col-md-4">
+              <img
+                className="img-fluid"
+                src="https://images.contentstack.io/v3/assets/blt6f84e20c72a89efa/blt0dea19c9ca1bfc7e/6261d5d5479b5e559dd84bc2/img-things-donate-animal-shelters-header.jpg"
+              />
+            </div>
+            <div className="col-md-8">
+              <CardDescription>
+                The people that work at these shelters do a lot for the dogs
+                under their care. That is one reason why you should donate to
+                dog shelters. You are helping your neighbors earn money, help
+                the economy as well as help the many unwanted dogs who did not
+                ask to be there.
+              </CardDescription>
+              <Modal
+                onClose={() => setOpen2(false)}
+                onOpen={() => setOpen2(true)}
+                open={open2}
+                trigger={
+                  <div className="text-center">
+                    <Button className="mt-4">Learn More About Donating</Button>
+                  </div>
+                }
+              >
+                <Modal.Header>
+                  Why You Should Donate to Animal Shelters
+                </Modal.Header>
+                <Modal.Content image>
+                  <Image
+                    size="large"
+                    src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/cute-cat-and-dog-friends-1.jpg"
+                    wrapped
+                  />
+                  <Modal.Description>
+                    <ul>
+                      <li>
+                        <h4>1. Houses More Dogs</h4>
+                        Your donations make it possible for these dog shelters
+                        to help more dogs find safety, shelter, and a new home.
+                        The longer a dog can stay in the shelter the better
+                        their chances of finding a new owner they can be a
+                        companion to and protect.
+                      </li>
+                      <li>
+                        <h4>2. Cuts Down on Euthanasion</h4>
+                        Those dog shelters that get donations can avoid the
+                        tragic event of putting unwanted dogs down. This is very
+                        emotional for the shelter workers, something they would
+                        rather avoid.Plus, with the extra funds, they can keep
+                        those dogs longer until a good home is found for them.
+                        Your donation can save dogs as well as spare humans this
+                        emotional time.
+                      </li>
+                      <li>
+                        <h4>3. If You Can't Adopt, You Can Still Help</h4>
+                        That is the bottom line here. Not everyone can adopt a
+                        dog. Their living situations just do not allow it.
+                        However, you can still help by making donations to dog
+                        shelters allowing someone else who can adopt to have the
+                        time to find the right pet for them.
+                      </li>
+                    </ul>
+                  </Modal.Description>
+                </Modal.Content>
+                <Modal.Actions>
+                  <Button color="black" onClick={() => setOpen2(false)}>
+                    Close
+                  </Button>
+                  {/* <Button
                   content="Yep, that's me"
                   labelPosition="right"
                   icon="checkmark"
                   onClick={() => setOpen(false)}
                   positive
                 /> */}
-              </Modal.Actions>
-            </Modal>
+                </Modal.Actions>
+              </Modal>
+            </div>
           </CardContent>
         </Card>
       </div>
