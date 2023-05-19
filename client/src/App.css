@@ -221,9 +221,7 @@ button.btn.btn-primary {
 }
 
 .adoptablepetspic1 {
-  text-align: center;
-  background-color: lightsteelblue;
-  padding: 60px;
+  display: flex;
 }
 
 /* .container {
