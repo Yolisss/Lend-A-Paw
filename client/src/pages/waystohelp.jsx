@@ -10,13 +10,12 @@ export default function Waystohelp() {
   const [open2, setOpen2] = React.useState(false);
   return (
     <div>
-      <div
-        className="waystohelpimages1"
-        style={{
-          backgroundImage:
-            "url(https://www.rd.com/wp-content/uploads/2018/10/15-Surprising-Benefits-of-Adopting-a-Shelter-Dog-14.jpg)",
-        }}
-      ></div>
+      <div className="waystohelpimage2">
+        <img
+          src="https://post.healthline.com/wp-content/uploads/2020/07/petting_pet_cat-1200x628-facebook-1200x628.jpg"
+          width="550px"
+        />
+      </div>
 
       <div className="waystohelpquote1">
         <p>
@@ -24,11 +23,14 @@ export default function Waystohelp() {
           fur friend, feed it and keept it around."
         </p>
       </div>
-      <Container>
-        <img
-          src="https://post.healthline.com/wp-content/uploads/2020/07/petting_pet_cat-1200x628-facebook-1200x628.jpg"
-          width="550px"
-        />
+      <div className="waystohelpcontent2">
+        <div
+          className="waystohelpimages1"
+          style={{
+            backgroundImage:
+              "url(https://dogsbestlife.com/wp-content/uploads/2021/02/cats-vs.-dogs-group-scaled.jpeg)",
+          }}
+        ></div>
         <p>
           To pet a cat, rub its belly, endure blood and agony, quietly weep,
           keep rubbing belly chew foot, for funny little cat chirrup noise
@@ -48,7 +50,7 @@ export default function Waystohelp() {
           kitchen even if it's salad but human is in bath tub, emergency!
           drowning! meooowww!.
         </p>
-      </Container>
+      </div>
       <div class="row pt-5">
         <div class="row-md-4">
           <Card>
