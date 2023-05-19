@@ -11,16 +11,19 @@ export default function Waystohelp() {
   return (
     <div>
       <div
-        className="homeimages"
+        className="waystohelpimages1"
         style={{
           backgroundImage:
             "url(https://www.rd.com/wp-content/uploads/2018/10/15-Surprising-Benefits-of-Adopting-a-Shelter-Dog-14.jpg)",
         }}
       ></div>
 
-      <Container>
-        <p>"All is paws-ible when you rescue a friend."</p>
-      </Container>
+      <div className="waystohelpquote1">
+        <p>
+          "There's a saying. If you want someone to love you forever, adopt a
+          fur friend, feed it and keept it around."
+        </p>
+      </div>
       <Container>
         <img
           src="https://post.healthline.com/wp-content/uploads/2020/07/petting_pet_cat-1200x628-facebook-1200x628.jpg"
