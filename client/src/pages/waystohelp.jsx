@@ -53,7 +53,7 @@ export default function Waystohelp() {
           </p>
         </div>
       </div>
-      <div className="container-fluid pt-5">
+      <div className="container-fluid pt-3">
         <Card>
           <CardContent className="p-4 row align-items-center">
             <div className="col-md-4">
@@ -267,7 +267,7 @@ export default function Waystohelp() {
         </Card>
 
         <Card>
-          <CardContent className="p-4 row align-items-centerr">
+          <CardContent className="p-4 row align-items-center">
             <div className="col-md-4">
               <img
                 className="img-fluid"
