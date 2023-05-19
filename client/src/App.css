@@ -217,11 +217,23 @@ button.btn.btn-primary {
 
 .intropargadoptpets {
   text-align: center;
-  padding: 0px 300px 60px;
+  padding: 0px 300px 100px;
 }
 
 .adoptablepetspic1 {
+  text-align: center;
   display: flex;
+}
+
+.adoptablepetspic2 {
+  display: flex;
+  justify-content: center;
+}
+
+.adoptablepetsparag2 {
+  display: flex;
+  text-align: center;
+  padding: 100px 300px 100px;
 }
 
 /* .container {
