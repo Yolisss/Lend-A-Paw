@@ -42,14 +42,12 @@ export default function Adoptablepets() {
         />
       </div>
       <div className="container-fuild pt-3">
-        <div className="col-md-4">
-          <img
-            className="img-fuild"
-            src="https://www.petfinder.com/static/00836efabded939d79d00ea755e4b140/b44b0/dog-landing-hero-lg.jpg"
-          />
+        <div className="adoptablepetspic2">
+          <img src="https://images.unsplash.com/photo-1642625932641-3a52ad27e268?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjk3fHxjYXQlMjBhbmQlMjBkb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" />
         </div>
-        <div className="col-md-8">
+        <div className="adoptablepetsparag2">
           <p>
+            <h3>Our Mission</h3>
             Persian birman so maine coon for donskoy tom. Ocelot savannah.
             Abyssinian american bobtail so bengal, but jaguar yet egyptian mau.
             Panther himalayan. Ragdoll ocelot ragdoll or persian, or ragdoll and
