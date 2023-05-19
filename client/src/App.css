@@ -92,6 +92,8 @@ button.btn.btn-primary {
 
 .homeimages {
   height: 30em;
+  max-height: 50%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -176,6 +178,21 @@ button.btn.btn-primary {
 .aboutustitle2 {
   text-align: center;
   padding: 40px;
+}
+
+.waystohelpquote1 {
+  padding: 100px;
+  text-align: center;
+}
+
+.waystohelpimages1 {
+  height: 20em;
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* .container {
