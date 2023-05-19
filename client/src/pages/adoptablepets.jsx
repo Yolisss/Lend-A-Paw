@@ -41,18 +41,23 @@ export default function Adoptablepets() {
           width="550px"
         />
       </div>
-      <div>
-        <img
-          src="https://www.petfinder.com/static/00836efabded939d79d00ea755e4b140/b44b0/dog-landing-hero-lg.jpg"
-          width="550px"
-        />
-        <p>
-          Persian birman so maine coon for donskoy tom. Ocelot savannah.
-          Abyssinian american bobtail so bengal, but jaguar yet egyptian mau.
-          Panther himalayan. Ragdoll ocelot ragdoll or persian, or ragdoll and
-          burmese. Egyptian mau. Himalayan grimalkin siberian cornish rex, but
-          manx thai. Puma cheetah yet lion or himalayan, savannah kitty mouser.
-        </p>
+      <div className="container-fuild pt-3">
+        <div className="col-md-4">
+          <img
+            className="img-fuild"
+            src="https://www.petfinder.com/static/00836efabded939d79d00ea755e4b140/b44b0/dog-landing-hero-lg.jpg"
+          />
+        </div>
+        <div className="col-md-8">
+          <p>
+            Persian birman so maine coon for donskoy tom. Ocelot savannah.
+            Abyssinian american bobtail so bengal, but jaguar yet egyptian mau.
+            Panther himalayan. Ragdoll ocelot ragdoll or persian, or ragdoll and
+            burmese. Egyptian mau. Himalayan grimalkin siberian cornish rex, but
+            manx thai. Puma cheetah yet lion or himalayan, savannah kitty
+            mouser.
+          </p>
+        </div>
       </div>
       <ListAnimals setId={setId} />
     </div>
