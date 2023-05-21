@@ -233,10 +233,18 @@ button.btn.btn-primary {
   height: auto;
 }
 
+/* image in adoptable pets page */
 .adoptablepetsparag2 {
   display: flex;
   text-align: center;
   padding: 100px 300px 100px;
+}
+
+.adoptablepetcontainer2 {
+  background-color: #eab9d7;
+  padding: 50px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /* whole form */
@@ -265,12 +273,14 @@ button.btn.btn-primary {
 .thankyouheader {
   text-align: center;
   padding: 20px;
-  margin: 50px;
+  margin: 30px;
+  background-color: #ffdd9b;
 }
-.thankyouparagraph {
+.thankyoucomponent {
   text-align: center;
-  padding: 20px;
-  margin: 70px;
+  padding: 50px;
+  margin: 20px;
+  background-color: #ffdd9b;
 }
 .thankyoucolumn {
   /* float: left; */
@@ -281,7 +291,13 @@ button.btn.btn-primary {
 .thankyourow::after {
   display: flex;
 }
-
+.adoptablepetscontainer2 {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #a3e1e1;
+}
 /* .container {
   display: flex;
   align-items: center;
