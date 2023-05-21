@@ -110,56 +110,62 @@ const AdoptionForm = (props) => {
   // };
 
   return (
-    <Form className="form-students" onSubmit={handleSubmit}>
-      <Form.Group>
-        <Form.Label>Full Name</Form.Label>
-        <input
-          type="text"
-          id="add-user-fullname"
-          placeholder="Full name"
-          required
-          value={adoption.fullname}
-          onChange={handleFullnameChange}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Email</Form.Label>
-        <input
-          type="text"
-          id="add-user-email"
-          placeholder="Email"
-          required
-          value={adoption.email}
-          onChange={handleEmailChange}
-        />
+    <div className="formcomponent">
+      <h3 className="formheader">
+        Please fill this form and tell us why you are interested in adopting
+        this pet.
+      </h3>
+      <Form className="form-animal" onSubmit={handleSubmit}>
         <Form.Group>
-          <Form.Label>Reason</Form.Label>
+          <Form.Label>Full Name</Form.Label>
           <input
             type="text"
-            id="add-user-reason"
-            placeholder="Reason"
+            id="add-user-fullname"
+            placeholder="Full name"
             required
-            value={adoption.reason}
-            onChange={handleReasonChange}
+            value={adoption.fullname}
+            onChange={handleFullnameChange}
           />
         </Form.Group>
-      </Form.Group>
+        <Form.Group>
+          <Form.Label>Email</Form.Label>
+          <input
+            type="text"
+            id="add-user-email"
+            placeholder="Email"
+            required
+            value={adoption.email}
+            onChange={handleEmailChange}
+          />
+          <Form.Group>
+            <Form.Label>Reason</Form.Label>
+            <input
+              type="text"
+              id="add-user-reason"
+              placeholder="Reason"
+              required
+              value={adoption.reason}
+              onChange={handleReasonChange}
+            />
+          </Form.Group>
+        </Form.Group>
 
-      <Form.Group>
-        <Button
-          type="submit"
-          variant="outline-success"
-          // onClick={handleRedirect}
-        >
-          {adoption.id ? "Edit Adoption" : "Add Adoption"}
-        </Button>
-        {adoption.id ? (
-          <Button type="button" variant="outline-warning" onClick={clearForm}>
-            Cancel
+        <Form.Group>
+          <Button
+            type="submit"
+            variant="outline-success"
+            // onClick={handleRedirect}
+          >
+            {adoption.id ? "Edit Adoption" : "Submit My Form"}
           </Button>
-        ) : null}
-      </Form.Group>
-    </Form>
+          {adoption.id ? (
+            <Button type="button" variant="outline-warning" onClick={clearForm}>
+              Cancel
+            </Button>
+          ) : null}
+        </Form.Group>
+      </Form>
+    </div>
   );
 };
 
