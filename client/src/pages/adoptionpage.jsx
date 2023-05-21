@@ -7,8 +7,10 @@ export default function Adoptionpage() {
   const { animalid } = useParams();
   return (
     <div>
-      <h3>Thank You For Considering Adoption!</h3>
-      <div>
+      <div className="thankyouheader">
+        <h3>Thank You For Considering Adoption!</h3>
+      </div>
+      <div className="thankyouparagraph">
         Annoy owner until he gives you food say meow repeatedly until belly
         rubs, feels good missing until dinner time, yet meow meow pee in shoe
         sit by the fire, play time, so climb leg, for i want to go outside let
@@ -25,22 +27,22 @@ export default function Adoptionpage() {
         what the heck just happened, something feels fishy, cat cat moo moo lick
         ears lick paws.{" "}
       </div>
-      <div className="row">
-        <div className="column">
+      <div className="thankyoucolumn">
+        <div className="thankyourow">
           <img
             src="https://t4.ftcdn.net/jpg/00/84/66/63/360_F_84666330_LoeYCZ5LCobNwWePKbykqEfdQOZ6fipq.jpg"
             alt="A floof"
             style={{ width: "350px" }}
           />
         </div>
-        <div className="column">
+        <div className="thankyourow">
           <img
-            src="https://hips.hearstapps.com/hmg-prod/images/small-fuffy-dog-breeds-1623362663.jpg?crop=1.00xw:0.753xh;0,0.0719xh&resize=1200:*"
+            src="https://www.hepper.com/wp-content/uploads/2021/05/Pembroke-Welsh-Corgi-dog-lying-on-grass.webp"
             alt="pomeranian"
             style={{ width: "350px" }}
           />
         </div>
-        <div className="column">
+        <div className="thankyourow">
           <img
             src="https://economictimes.indiatimes.com/thumb/msid-95129274,width-1600,height-1066,resizemode-4,imgsize-59990/national-black-cat-day-see-why-us-celebrates-this-occasion.jpg?from=mdr"
             alt="black floofy cat"
