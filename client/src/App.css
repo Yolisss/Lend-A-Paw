@@ -256,6 +256,30 @@ button.btn.btn-primary {
   text-align: center;
   padding-top: 30px;
 }
+.formbutton {
+  background-color: darkorange;
+  padding: 20px;
+}
+
+.thankyouheader {
+  text-align: center;
+  padding: 20px;
+  margin: 50px;
+}
+.thankyouparagraph {
+  text-align: center;
+  padding: 20px;
+  margin: 70px;
+}
+.thankyoucolumn {
+  /* float: left; */
+  width: 33.33%;
+  padding: 5px;
+  display: flex;
+}
+.thankyourow::after {
+  display: flex;
+}
 
 /* .container {
   display: flex;
