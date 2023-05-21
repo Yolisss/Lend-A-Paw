@@ -175,6 +175,9 @@ Step 7: Run both servers by opening a new terminal and by switching over to the 
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/7a8d5771-ad5d-4e19-95cc-e0ac504b5e86" width="300" height="600" />
 <h4>Ways To Help Part 2</h4>
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/38ae8645-7301-4f82-9cdf-a2823603651e" width="300" height="600" />
+<h4>Strech goal: Favorites Feature Part 1</h4>
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/8d1fe1d9-0060-49e8-86be-480af51e7f52" width="300" height="600" />
+
 
 
 
