@@ -152,7 +152,6 @@ const AdoptionForm = (props) => {
 
         <Form.Group>
           <Button
-            className="formbutton"
             type="submit"
             variant="outline-success"
             // onClick={handleRedirect}
