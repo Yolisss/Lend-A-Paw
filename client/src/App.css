@@ -298,6 +298,21 @@ button.btn.btn-primary {
   justify-content: center;
   background-color: #a3e1e1;
 }
+
+.finalthankyoumessage {
+  text-align: center;
+  background-color: #f4c0c0;
+  padding: 50px;
+  margin: 50px;
+  border-radius: 25px;
+}
+.finalthankyouheader {
+  padding: 30px;
+  margin: 50px;
+}
+.finalthankyouimage {
+  margin: 10px;
+}
 /* .container {
   display: flex;
   align-items: center;
