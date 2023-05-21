@@ -244,6 +244,7 @@ button.btn.btn-primary {
   background-color: #8dd9e0;
   padding: 50px;
   margin: 100px;
+  border-radius: 25px;
 }
 
 /* controls each input */
