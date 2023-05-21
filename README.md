@@ -155,3 +155,8 @@ Step 7: Run both servers by opening a new terminal and by switching over to the 
  cd server
  npm run dev
 ```
+
+## Wireframe
+<h4>Home Page</h4>
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/2aace635-0982-4ad6-ad8b-8b5e91ad53f3" width="300" height="500" />
+
