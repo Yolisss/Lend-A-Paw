@@ -47,6 +47,8 @@ input[type="text"] {
 }
 
 button.btn.btn-primary {
+  border-color: #ffdd9b;
+  background-color: #ffdd9b;
   margin-top: 25px;
 }
 
@@ -227,13 +229,32 @@ button.btn.btn-primary {
 
 .adoptablepetspic2 {
   display: flex;
-  justify-content: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .adoptablepetsparag2 {
   display: flex;
   text-align: center;
   padding: 100px 300px 100px;
+}
+
+/* whole form */
+.formcomponent {
+  background-color: #8dd9e0;
+  padding: 50px;
+  margin: 100px;
+}
+
+/* controls each input */
+.form-animal {
+  padding: 20px;
+  margin: 20px;
+}
+.formheader {
+  color: white;
+  text-align: center;
+  padding-top: 30px;
 }
 
 /* .container {
