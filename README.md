@@ -167,6 +167,10 @@ Step 7: Run both servers by opening a new terminal and by switching over to the 
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/6273187f-425d-47f7-8739-be98560e5317" width="300" height="700" />
 <h4>Sign-In/Sign-Up Form</h4>
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b3edca06-a088-46c7-81dc-5581d91fa91d" width="300" height="700" />
+<h4>Adoption Form</h4>
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/f3b4dd75-b00e-4196-875d-617df114683c" width="300" height="700" />
+
+
 
 
 
