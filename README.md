@@ -6,9 +6,14 @@
 ## Contents
 
 - About
+- Render
 - Tech Stack
 - API Reference
-- Drawing Board/Planning Phase
+- Wireframe
+- Installation
+
+<h2>Render Link</h2>
+ https://server-h05o.onrender.com 
 
 <h2>About<h2>
 <h3 align="center"> Why use Lend A Paw? - App Overview </h3>
