@@ -16,6 +16,7 @@ import images from "../images/images";
 
 function MyNavbar(props) {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
+
   return (
     <>
       <div style={{ display: "flex", backgroundColor: "#e1c1e0" }}>
