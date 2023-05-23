@@ -62,6 +62,14 @@ const router = createBrowserRouter([
 //would want aboutme component to display
 
 function App() {
+  //in order for link to work, it needs to know all of its routes
+  //React Context stores the routes
+  //in your app, as long as its surrounded by RouterProvider
+  //then links are defined because the context exist
+  // in order for the link compenent to know if the path exists,
+  //it needs to know what is a valid route
+  //all of those routes exist within a react context (fancy feature that
+  //makes info globally available to your application)
   return <RouterProvider router={router} />;
 }
 export default App;
