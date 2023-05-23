@@ -17,7 +17,7 @@ import { List, Icon } from "semantic-ui-react";
 const Contactinfo = () => (
   <div className="listitemcard">
     <h3>Lend A Paw</h3>
-    <List>
+    <List data-testid="contactinfolist">
       <List.Item>
         <List.Header>Email:</List.Header>lendapaw@gmail.com
       </List.Item>
