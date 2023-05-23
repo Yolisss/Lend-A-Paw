@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import Thankyou from "./thankyou";
 import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+
 // {
 //   onSaveStudent, editingStudent, onUpdateStudent;
 // }
 
 const AdoptionForm = (props) => {
+  const { user, getAccessTokenSilently } = useAuth0();
+
   const navigate = useNavigate();
 
   // This is the original State with not initial student
@@ -53,7 +57,9 @@ const AdoptionForm = (props) => {
   const postAdoption = async (newAdoption) => {
     await fetch("/api/adoptionform", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(newAdoption),
     })
       .then((response) => {
