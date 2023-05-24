@@ -115,7 +115,11 @@ const AdoptionForm = (props) => {
         Please fill this form and tell us why you are interested in adopting
         this pet.
       </h3>
-      <Form className="form-animal" onSubmit={handleSubmit}>
+      <Form
+        data-testid="formtest"
+        className="form-animal"
+        onSubmit={handleSubmit}
+      >
         <Form.Group>
           <Form.Label>Full Name</Form.Label>
           <input
