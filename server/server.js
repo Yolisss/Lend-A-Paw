@@ -5,6 +5,7 @@ const path = require("path");
 const db = require("./db/db-connection.js");
 const fakeanimals = require("./fakeanimaldata.js");
 const fetch = require("node-fetch");
+
 //const path = require("path");
 //const { appendFileSync } = require("fs");
 
@@ -151,17 +152,62 @@ app.get("/api/animals", async (req, res) => {
 //     }
 //   }
 // });
+//post req for user
+// app.post("/api/users", async (req, res) => {
+//   try {
+//     console.log(req.body);
+//     const newAdoption = {
+//       email: req.body.email,
+//     };
+//     //console.log([newStudent.firstname, newStudent.lastname, newStudent.iscurrent]);
+//     console.log(newAdoption);
+//     //res.status(200).json();
+//     const result = await db.query(
+//       "INSERT INTO adoptionform(email) VALUES($1) RETURNING *",
+//       [newAdoption.email]
+//     );
+//     console.log(result.rows[0]);
+//     res.json(result.rows[0]);
+//   } catch (e) {
+//     console.log(e);
+//     res.status(400).json({ e });
+//   }
+// });
+// app.post("/api/users", async (req, res) => {
+//   try {
+//     const newUser = {
+//       fullname: req.body.fullname,
+//       email: req.body.email,
+//     };
+//     console.log(newUser);
+//     const resultUser = await db.query(
+//       "INSERT INTO users(fullname, email) VALUES($1, $2) RETURNING *",
+//       [newUser.fullname, newUser.email]
+//     );
+//     console.log(resultUser.rows[0]);
+//     res.json(resultUser.rows[0]);
+//   } catch (e) {
+//     console.log(e);
+//     res.status(400).json({ e });
+//   }
+// });
 
 // // create the POST request
 app.post("/api/adoptionform", async (req, res) => {
   try {
-    console.log(req.body);
     const newAdoption = {
       pet_id: req.body.id,
       fullname: req.body.fullname,
       email: req.body.email,
       reason: req.body.reason,
     };
+    const newUser = {
+      fullname: req.body.fullname,
+      email: req.body.email,
+    };
+
+    console.log(newUser);
+
     //console.log([newStudent.firstname, newStudent.lastname, newStudent.iscurrent]);
     console.log(newAdoption);
     //res.status(200).json();
@@ -174,7 +220,12 @@ app.post("/api/adoptionform", async (req, res) => {
         newAdoption.reason,
       ]
     );
+    const resultUser = await db.query(
+      "INSERT INTO users(fullname, email) VALUES($1, $2) RETURNING *",
+      [newUser.fullname, newUser.email]
+    );
     console.log(result.rows[0]);
+    console.log(resultUser.rows[0]);
     res.json(result.rows[0]);
   } catch (e) {
     console.log(e);
