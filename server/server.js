@@ -40,7 +40,6 @@ async function getOAuthToken() {
   //return access_token which will allow us to continue
   //reusing the same token to make API calls
   if (OAuthTokenTTL != null && now < OAuthTokenTTL) {
-    console.log("hello");
     return OAuthToken;
   }
   //headers: specifies content type; telling the server how to handle the
@@ -71,7 +70,6 @@ async function getOAuthToken() {
     requestOptions
   );
   const response = await result.json();
-  console.log("toast", response);
   OAuthToken = response.access_token;
   //current time + time that is going to expires in
   //creating a new day time. without anything inside it,
@@ -118,7 +116,6 @@ app.get("/api/animals", async (req, res) => {
   let access_token = await getOAuthToken();
   // let animal = req.query.animals;
   let URL = "https://api.petfinder.com/v2/animals";
-  console.log(URL);
   fetch(URL, {
     headers: {
       Authorization: `Bearer ${access_token}`,
@@ -131,8 +128,6 @@ app.get("/api/animals", async (req, res) => {
     //.json returns another promise
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
-
       //it is returning that result obj as a json response
       //that can then be used by the front end
       //result defining new obj from api
@@ -208,10 +203,8 @@ app.post("/api/adoptionform", async (req, res) => {
       email: req.body.email,
     };
 
-    console.log(newUser);
-
     //console.log([newStudent.firstname, newStudent.lastname, newStudent.iscurrent]);
-    console.log(newAdoption);
+
     //res.status(200).json();
     const result = await db.query(
       "INSERT INTO adoptionform(pet_id, fullname, email,reason) VALUES($1, $2, $3, $4) RETURNING *",
@@ -226,11 +219,9 @@ app.post("/api/adoptionform", async (req, res) => {
       "INSERT INTO users(fullname, email) VALUES($1, $2) RETURNING *",
       [newUser.fullname, newUser.email]
     );
-    console.log(result.rows[0]);
-    console.log(resultUser.rows[0]);
     res.json(result.rows[0]);
   } catch (e) {
-    console.log(e);
+    console.log(e.message);
     res.status(400).json({ e });
   }
 });
