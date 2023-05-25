@@ -11,6 +11,7 @@ const ListAnimals = (props) => {
   // this is my original state with an array of students
   const [animals, setAnimals] = useState([]);
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
+  const [favorites, setFavorites] = useState([]);
 
   //this is the state needed for the UpdateRequest
   //const [editingStudent, setEditingStudent] = useState(null);
@@ -31,6 +32,44 @@ const ListAnimals = (props) => {
   useEffect(() => {
     loadAnimals();
   }, []);
+
+  //What i'm trying to say:
+  //once the user clicks on favorite, i want that pet info to be transferred to
+  //favorites page
+  //to take pet info to another page, we can do that by its id
+  const addToFavorites = (animalId, userEmail) => {
+    console.log("animal id from line 41", animalId);
+    console.log("animal id from line 41", userEmail);
+    fetch("/api/favorites", {
+      method: "POST",
+      //headers is a way to specify metadata or instructions
+      //for the backend
+      //this header is content-type: application/json
+      //its telling backend: the info is in json format
+      headers: {
+        "Content-Type": "application/json",
+      },
+      //body is what data i'm sending
+      //in js, all info in 'json' is formatted in an obj
+      //but in order to pass data to the backend,
+      //we need to format from obj to str
+      body: JSON.stringify({ userEmail: userEmail, animalId: animalId }),
+    })
+      //because this arrow function doesn't have curly braces
+      //whatever is on the right of the arrow, it will automatically return
+      //the response will come back automatically
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("data on line 63", data);
+        if ((data.action = "added")) {
+          setFavorites([...favorites, animalId]);
+        } else {
+          setFavorites([...favorites, []]);
+        }
+      });
+  };
+
+  //if data was removed, remove it from your favorites
 
   //   const onSaveStudent = (newStudent) => {
   //     //console.log(newStudent, "From the parent - List of Students");
@@ -82,8 +121,19 @@ const ListAnimals = (props) => {
                   <Card.Description>{animal.description}</Card.Description>
                 </Card.Content>
                 <Card.Content>
+                  {/* jsx */}
                   {isAuthenticated ? (
-                    <Link to={`/adopt/${animal.id}`}>Adopt</Link>
+                    <>
+                      <Link to={`/adopt/${animal.id}`}>Adopt</Link>
+                      <Button
+                        onClick={() => addToFavorites(animal.id, user.email)}
+                      >
+                        {/* javascript */}
+                        {favorites.includes(animal.id)
+                          ? "remove to favorites"
+                          : "add to favorites"}
+                      </Button>
+                    </>
                   ) : (
                     <Button onClick={() => loginWithRedirect()}>Log In</Button>
                   )}
