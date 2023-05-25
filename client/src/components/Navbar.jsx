@@ -28,6 +28,7 @@ function MyNavbar(props) {
         />
       </div>
       <Navbar
+        data-testid="navbar"
         className="navbarstructure"
         style={{ backgroundColor: "#e1c1e0", marginBottom: "100px" }}
       >
