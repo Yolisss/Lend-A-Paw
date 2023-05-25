@@ -1,7 +1,7 @@
-# Lend A Paw
-
-![1](https://github.com/Yolisss/Lend-A-Paw/assets/106282120/2d458cf7-c83b-4a72-8651-fc7bf99817b0)
-
+<h1 align="center">Lend A Paw</h1>
+<div align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/2d458cf7-c83b-4a72-8651-fc7bf99817b0" />
+</div>
 
 ## Contents
 
@@ -9,16 +9,19 @@
 - Render
 - Tech Stack
 - API Reference
+- Official Database Schema
 - Wireframe
 - Installation
 
-<h2>Render Link</h2>
- https://server-h05o.onrender.com 
 
 <h2>About<h2>
 <h3 align="center"> Why use Lend A Paw? - App Overview </h3>
   Lend A Paw is an application for animal lovers and are looking to find ways to help animals in need. With Lend A Paw, you have the option to adopt your pet of choice, and have access to a list of animals that are up for adoption. What if you're not interested in adopting a pet at the moment? No problem! Lend A Paw's mission (besides getting you to adopt instead of shop animals) is to also spread awareness about fostering, donating, and volunterring! 
   <br></br>
+ 
+ <h2>Render</h2>
+ https://server-h05o.onrender.com 
+
 
 ## Tech Stack 
 [Back to Contents](#contents)
@@ -76,27 +79,22 @@
   </tr>
 </table>
   
-<h2 align="center">Drawing Board/Planning Phase</h2>
-<h3 align="center"> Official Database Schema </h3>
+<h2>Official Database Schema</h2>
 <h4 align="center">User</h4>
 <table align="center">
   </tr>
   <tr>
     <th>id</th>
-    <th>nickname</th>
-    <th>first Name</th>
-    <th>last Name</th>
-    <th>email</th>
+   <th>Full Name</th>
+    <th>Email</th>
   </tr>
   <tr>
     <td>INTEGER (Primary Key)</td>
     <td>VARCHAR (255)</td>
     <td>VARCHAR (255)</td>
-    <td>VARCHAR (255)</td>
-    <td>VARCHAR (255)</td>
   </tr>
 </table>
-<h4 align="center">Adoption_form</h4>
+<h4 align="center">Adoption Form</h4>
 <table align="center">
   <tr>
     <th>id</th>
@@ -112,33 +110,54 @@
     <td>VARCHAR (255)</td>
     <td>VARCHAR (255)</td>
   </tr>
+ </table>
+ <h4 align="center">Stretch goal: Favorites</h4>
+<table align="center">
+  <tr>
+    <th>pet_id</th>
+    <th>User Email</th>
+  </tr>
+  <tr>
+    <td>INTEGER</td>
+    <td>VARCHAR (255)</td>
+  </tr>
 </table>
 
 
 ## Wireframe
-<h4>Home Page</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/2aace635-0982-4ad6-ad8b-8b5e91ad53f3" width="300" height="500" />
-<h4>About Us</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/0b12ef76-791e-4fa2-900e-c90af5cbd826" width="300" height="700" />
-<h4>Adoptable Page Part 1</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/534ba119-82be-4f0e-8dd4-478352c214a0" width="300" height="700" />
-<h4>Adoptable Page Part 2</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/6273187f-425d-47f7-8739-be98560e5317" width="300" height="700" />
-<h4>Sign-In/Sign-Up Form</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b3edca06-a088-46c7-81dc-5581d91fa91d" width="300" height="600" />
-<h4>Adoption Form</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/f3b4dd75-b00e-4196-875d-617df114683c" width="300" height="600" />
-<h4>"Thank You For Submitting Your Form" Page</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/05c838d4-5425-4227-89df-55fecbe11f86" width="300" height="300" />
-<h4>Ways To Help Part 1</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/7a8d5771-ad5d-4e19-95cc-e0ac504b5e86" width="300" height="600" />
-<h4>Ways To Help Part 2</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/38ae8645-7301-4f82-9cdf-a2823603651e" width="300" height="600" />
-<h4>Strech goal: Favorites Feature Part 1</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/8d1fe1d9-0060-49e8-86be-480af51e7f52" width="300" height="600" />
-<h4>Strech goal: Favorites Feature Part 2</h4>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b4127c37-1e69-4ff0-9117-a45a774e45f1" width="300" height="600" />
+<p float="left">
+<h4 align="center">From Left To Right</h4>
+<h4 align="center">Home Page | About Us</h4>
+<p align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/2aace635-0982-4ad6-ad8b-8b5e91ad53f3" width="320" height="700" />
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/0b12ef76-791e-4fa2-900e-c90af5cbd826" width="320" height="700" />
+</p>
+<h4 align="center">Adoptable Pets Page Part 1 | Adoptable Page Part 2 </h4>
+<p align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/534ba119-82be-4f0e-8dd4-478352c214a0" width="320" height="700" />
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/6273187f-425d-47f7-8739-be98560e5317" width="320" height="700" />
+</p>
+<h4 align="center"> Sign-In/Sign-Up Form | Adoption Form</h4>
+<p align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b3edca06-a088-46c7-81dc-5581d91fa91d" width="320" height="700" />
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/f3b4dd75-b00e-4196-875d-617df114683c" width="320" height="700" />
+</p>
+<h4 align="center">Ways To Help Part 1 | Ways To Help Part 2</h4>
+<p align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/7a8d5771-ad5d-4e19-95cc-e0ac504b5e86" width="320" height="700" />
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/38ae8645-7301-4f82-9cdf-a2823603651e" width="320" height="700" />
+</p>
+<h4 align="center"> "Thank You For Submitting Your Form" Page</h4>
+<p align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/05c838d4-5425-4227-89df-55fecbe11f86" width="320" height="300" />
+<p>
+<h4 align="center">Strech goal: Favorites Feature Part 1 | Favorites Feature Part 2</h4>
+<p align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/8d1fe1d9-0060-49e8-86be-480af51e7f52" width="320" height="700" />
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b4127c37-1e69-4ff0-9117-a45a774e45f1" width="320" height="700" />
 
+ 
+ 
 ## Installation
 Step 1. Go to the source directory in your terminal to clone this project. Once that is done, switch into the project directory.
 ```bash
