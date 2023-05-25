@@ -62,6 +62,8 @@ const AdoptionForm = (props) => {
       },
       body: JSON.stringify(newAdoption),
     })
+      //because you have curly braces,
+      //you need to have the return statement
       .then((response) => {
         return response.json();
       })
