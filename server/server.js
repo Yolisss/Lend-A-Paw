@@ -98,45 +98,45 @@ app.get("/", (req, res) => {
 });
 
 // create the get request for students in the endpoint '/api/students'
-app.get("/api/animals", async (req, res) => {
-  res.json(fakeanimals.animals);
-  //   try {
-  //     const { rows: allAnimals } = await db.query("SELECT * FROM allAnimals");
-  //     //res.send(allAnimals);
-  //   } catch (e) {
-  //     return res.status(400).json({ e });
-  //   }
-});
-
 // app.get("/api/animals", async (req, res) => {
-//   //recieving request. in query param we're getting city value
-//   //process: is a reference to the current execution that's running your code (node)
-//   //any environment var that node has access to, will be accessible via process.env
-//   //exist by default in terminal
-//   let access_token = await getOAuthToken();
-//   // let animal = req.query.animals;
-//   let URL = "https://api.petfinder.com/v2/animals";
-//   console.log(URL);
-//   fetch(URL, {
-//     headers: {
-//       Authorization: `Bearer ${access_token}`,
-//     },
-//   })
-//     //what code do you want to execute when that fetch is finished
-//     //.then executes once the fetch has been resolved
-//     //i get the respond back essentially as a string
-//     //json converts string to actual object
-//     //.json returns another promise
-//     .then((response) => response.json())
-//     .then((result) => {
-//       console.log(result);
-
-//       //it is returning that result obj as a json response
-//       //that can then be used by the front end
-//       //result defining new obj from api
-//       res.json(result.animals);
-//     });
+//   res.json(fakeanimals.animals);
+//   //   try {
+//   //     const { rows: allAnimals } = await db.query("SELECT * FROM allAnimals");
+//   //     //res.send(allAnimals);
+//   //   } catch (e) {
+//   //     return res.status(400).json({ e });
+//   //   }
 // });
+
+app.get("/api/animals", async (req, res) => {
+  //recieving request. in query param we're getting city value
+  //process: is a reference to the current execution that's running your code (node)
+  //any environment var that node has access to, will be accessible via process.env
+  //exist by default in terminal
+  let access_token = await getOAuthToken();
+  // let animal = req.query.animals;
+  let URL = "https://api.petfinder.com/v2/animals";
+  console.log(URL);
+  fetch(URL, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  })
+    //what code do you want to execute when that fetch is finished
+    //.then executes once the fetch has been resolved
+    //i get the respond back essentially as a string
+    //json converts string to actual object
+    //.json returns another promise
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+
+      //it is returning that result obj as a json response
+      //that can then be used by the front end
+      //result defining new obj from api
+      res.json(result.animals);
+    });
+});
 
 // app.get("/api/animals/:animalID", async (req, res) => {
 //   //represents the obj that will be returned with the specific
