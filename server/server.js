@@ -40,6 +40,7 @@ async function getOAuthToken() {
   //return access_token which will allow us to continue
   //reusing the same token to make API calls
   if (OAuthTokenTTL != null && now < OAuthTokenTTL) {
+    console.log("hello");
     return OAuthToken;
   }
   //headers: specifies content type; telling the server how to handle the
@@ -70,6 +71,7 @@ async function getOAuthToken() {
     requestOptions
   );
   const response = await result.json();
+  console.log("toast", response);
   OAuthToken = response.access_token;
   //current time + time that is going to expires in
   //creating a new day time. without anything inside it,
