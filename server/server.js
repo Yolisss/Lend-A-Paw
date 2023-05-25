@@ -233,6 +233,62 @@ app.post("/api/adoptionform", async (req, res) => {
   }
 });
 
+//add a favorite
+//: signifies any variable value that you can think of
+app.post("/api/favorites", async (req, res) => {
+  try {
+    //represents the obj that will be returned with the specific
+    //data we're asking for
+    //params = anytime you have a param in route
+    //ex :PET_ID; in order to access these values;
+    //you need to do req.params
+    //params used for searching sorting filtering etc
+    const newFav = req.body.animalId;
+    const userEmail = req.body.userEmail;
+    //console.log([newFav.id]);
+    //favorites query is first
+    //has this user already favorited this pet id
+    //
+    const { rows: favorites } = await db.query(
+      "SELECT * FROM favorites WHERE pet_id = $1 and email = $2",
+      [newFav, userEmail]
+    );
+    if (favorites.length === 0) {
+      const result = await db.query(
+        "INSERT INTO favorites (pet_id, email) VALUES ($1, $2) returning *",
+        //$1 is being replaced with value newFav.id and same with $2
+        [newFav, userEmail]
+      );
+      res.json({ action: "added" });
+    } else {
+      // delete query
+      //     //res.send(allAnimals);
+      const result = await db.query(
+        "DELETE FROM favorites WHERE pet_id= $1 and email = $2",
+        [newFav, userEmail]
+      );
+      res.json({ action: "removed" });
+    }
+  } catch (e) {
+    return res.status(400).json({ e });
+  }
+});
+//remoove favorite
+
+// app.delete("/api/removeFavProduct/:petId", async (req, res) => {
+//   try {
+//     const removeFav = { id: req.params.productId };
+//     const result = await db.query(
+//       "DELETE FROM favorites WHERE product_id = $1",
+//       [removeFav.id]
+//     );
+//     res.json("Product was deleted, coming from server.js");
+//   } catch (error) {
+//     console.log(error);
+//     return res.status(400).json({ error });
+//   }
+// });
+
 // // delete request for students
 // app.delete("/api/students/:studentId", async (req, res) => {
 //   try {
