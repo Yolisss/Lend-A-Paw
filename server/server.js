@@ -271,6 +271,13 @@ app.post("/api/adoptionform", async (req, res) => {
 //     return res.status(400).json({ e });
 //   }
 
+// if the user visits directly the url, go again for index
+//when page goes to index, index will go to react and react will
+//provide the proper page to reload
+app.get("*", (req, res) => {
+  res.sendFile(path.join(REACT_BUILD_DIR, "index.html"));
+});
+
 // console.log that your server is up and running
 app.listen(PORT, () => {
   console.log(`Hola, Server listening on ${PORT}`);
