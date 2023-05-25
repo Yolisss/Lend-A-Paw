@@ -127,28 +127,35 @@
 ## Wireframe
 <p float="left">
 <h4 align="center">From Left To Right</h4>
-<h4 align="center">Home Page | About Us | Adoptable Pets Page Part 1</h4>
+<h4 align="center">Home Page | About Us</h4>
+<p align="center">
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/2aace635-0982-4ad6-ad8b-8b5e91ad53f3" width="320" height="700" />
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/0b12ef76-791e-4fa2-900e-c90af5cbd826" width="320" height="700" />
+</p>
+<h4 align="center">Adoptable Pets Page Part 1 | Adoptable Page Part 2 </h4>
+<p align="center">
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/534ba119-82be-4f0e-8dd4-478352c214a0" width="320" height="700" />
-<p>
-<h4 align="center">Adoptable Page Part 2 | Sign-In/Sign-Up Form | Adoption Form</h4>
-<p>
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/6273187f-425d-47f7-8739-be98560e5317" width="320" height="700" />
+</p>
+<h4 align="center"> Sign-In/Sign-Up Form | Adoption Form</h4>
+<p align="center">
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b3edca06-a088-46c7-81dc-5581d91fa91d" width="320" height="700" />
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/f3b4dd75-b00e-4196-875d-617df114683c" width="320" height="700" />
-<p>
-<h4 align="center">Ways To Help Part 1 | Ways To Help Part 2 | Strech goal: Favorites Feature Part 1</h4>
-<p>
+</p>
+<h4 align="center">Ways To Help Part 1 | Ways To Help Part 2</h4>
+<p align="center">
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/7a8d5771-ad5d-4e19-95cc-e0ac504b5e86" width="320" height="700" />
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/38ae8645-7301-4f82-9cdf-a2823603651e" width="320" height="700" />
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/8d1fe1d9-0060-49e8-86be-480af51e7f52" width="320" height="700" />
-<p>
-<h4 align="center">Strech goal: Favorites Feature Part 2 | "Thank You For Submitting Your Form" Page</h4>
-<p>
-<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b4127c37-1e69-4ff0-9117-a45a774e45f1" width="320" height="700" />
+</p>
+<h4 align="center"> "Thank You For Submitting Your Form" Page</h4>
+<p align="center">
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/05c838d4-5425-4227-89df-55fecbe11f86" width="320" height="300" />
 <p>
+<h4 align="center">Strech goal: Favorites Feature Part 1 | Favorites Feature Part 2</h4>
+<p align="center">
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/8d1fe1d9-0060-49e8-86be-480af51e7f52" width="320" height="700" />
+<img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/b4127c37-1e69-4ff0-9117-a45a774e45f1" width="320" height="700" />
+
  
  
 ## Installation
