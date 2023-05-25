@@ -67,6 +67,10 @@ const ListAnimals = (props) => {
     <div className="mybody">
       <div className="list-students">
         <h2>Meet Our Adoptable Pets </h2>
+        <h4>
+          Please note that in order to adopt one of our pets, you need to create
+          or sign into an account
+        </h4>
         <Card.Group itemsPerRow={3} centered>
           {animals.map((animal, index) => {
             return (
@@ -78,6 +82,7 @@ const ListAnimals = (props) => {
                 )}
                 <Card.Content>
                   <Card.Header>{animal.name}</Card.Header>
+                  <Card.Meta>{animal.age}</Card.Meta>
                   <Card.Meta>{animal.species}</Card.Meta>
                   <Card.Description>{animal.description}</Card.Description>
                 </Card.Content>
