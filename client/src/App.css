@@ -337,6 +337,7 @@ element.style {
   background-color: #ffdd9b;
 }
 .listanimalsheader {
+  color: grey;
   padding: 50px;
   margin-bottom: 50px;
 }
