@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background-color: white;
+  background-color: #c5efed;
   margin: 5px;
 }
 
@@ -21,8 +21,11 @@ a.navbar-brand {
 
 .list-students {
   text-align: center;
+  background-color: #ffdd9b;
   margin-top: 25px;
   flex: 1;
+  color: white;
+  padding: 60px;
 }
 
 ul {
@@ -101,7 +104,7 @@ element.style {
 }
 
 .homeimages {
-  height: 47em;
+  height: 46em;
   /* text-align: center; */
   margin: 0 auto 0;
   max-height: 60%;
@@ -117,11 +120,11 @@ element.style {
 }
 
 .homeparagraph {
-  background-color: "white";
-  font-size: 15px;
-  /* padding-left: 20px; */
-  padding: 3%;
-  margin: 3%;
+  background: white;
+  color: black;
+  font-size: large;
+  padding: 8%;
+  margin: 0% 15%;
   text-align: center;
 }
 
@@ -149,7 +152,7 @@ element.style {
 }
 
 .aboutusimages {
-  height: 30em;
+  height: 45em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -160,7 +163,7 @@ element.style {
   padding: 30px;
   align-items: center;
   justify-content: center;
-  background-color: #c5efed;
+  background-color: #f4c0c0;
 }
 
 .aboutusimage1 {
@@ -194,8 +197,10 @@ element.style {
 }
 
 .waystohelpquote1 {
-  background-color: lightgoldenrodyellow;
+  background-color: #ffdd9b;
+  color: white;
   padding: 150px;
+  font-size: x-large;
   text-align: center;
 }
 
@@ -230,7 +235,9 @@ element.style {
 
 .intropargadoptpets {
   text-align: center;
-  padding: 0px 300px 100px;
+  /* margin: 8px; */
+  padding: 80px 100px 80px;
+  background-color: white;
 }
 
 .adoptablepetspic1 {
@@ -323,6 +330,14 @@ element.style {
 }
 .finalthankyouimage {
   margin: 10px;
+}
+
+.listofcards {
+  background-color: #ffdd9b;
+}
+.listanimalsheader {
+  padding: 50px;
+  margin-bottom: 50px;
 }
 
 /* .container {

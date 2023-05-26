@@ -12,7 +12,7 @@ export default function Adoptablepets() {
     <div>
       <div className="intropargadoptpets">
         <h3>Meet Our Adoptable Pets!</h3>
-        <p>
+        <p className="px-115">
           Adipisicing error fugit and occaecat dolorem. Ab autem incididunt or
           ea veritatis for pariatur. Nulla iure yet commodi consequatur
           veritatis dolores or quasi. Quam eu or labore modi velit for illo, or
@@ -24,7 +24,7 @@ export default function Adoptablepets() {
           sunt, velit so ratione. Eu ratione. Vel pariatur.
         </p>
       </div>
-      <div className="adoptablepetspic1 container-fuild pt-3">
+      <div className="adoptablepetspic1 container-fuild">
         <img
           className="col-md-4"
           src="https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2F0JTIwYW5kJTIwZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"

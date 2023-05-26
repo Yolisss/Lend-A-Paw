@@ -66,12 +66,14 @@ const ListAnimals = (props) => {
   return (
     <div className="mybody">
       <div className="list-students">
-        <h2>Meet Our Adoptable Pets </h2>
-        <h4>
-          Please note that in order to adopt one of our pets, you need to create
-          or sign into an account
-        </h4>
-        <Card.Group itemsPerRow={3} centered>
+        <p className="listanimalsheader">
+          <h2>Meet Our Adoptable Pets </h2>
+          <h4>
+            Please note that in order to adopt one of our pets, you need to
+            create or sign into an account
+          </h4>
+        </p>
+        <Card.Group itemsPerRow={3} centered className="listofcards">
           {animals.map((animal, index) => {
             return (
               <Card key={index} centered>
