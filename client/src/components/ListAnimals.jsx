@@ -69,8 +69,8 @@ const ListAnimals = (props) => {
         <p className="listanimalsheader">
           <h2>Meet Our Adoptable Pets </h2>
           <h4>
-            Please note that in order to adopt one of our pets, you need to
-            create or sign into an account
+            *Please note that in order to adopt one of our pets, you need to
+            create or sign into an account*
           </h4>
         </p>
         <Card.Group itemsPerRow={3} centered className="listofcards">
@@ -92,7 +92,7 @@ const ListAnimals = (props) => {
                   {isAuthenticated ? (
                     <Link to={`/adopt/${animal.id}`}>Adopt</Link>
                   ) : (
-                    <Button onClick={() => loginWithRedirect()}>Log In</Button>
+                    <Button onClick={() => loginWithRedirect()}>Adopt</Button>
                   )}
                 </Card.Content>
               </Card>

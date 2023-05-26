@@ -305,6 +305,7 @@ element.style {
   width: 33.33%;
   padding: 5px;
   display: flex;
+  padding-left: 200px;
 }
 .thankyourow::after {
   display: flex;
