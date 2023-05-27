@@ -17,8 +17,9 @@
 <h2>About<h2>
 <h3 align="center"> Why use Lend A Paw? - App Overview </h3>
   Lend A Paw is an application for animal lovers and are looking to find ways to help animals in need. With Lend A Paw, you have the option to adopt your pet of choice, and have access to a list of animals that are up for adoption. What if you're not interested in adopting a pet at the moment? No problem! Lend A Paw's mission (besides getting you to adopt instead of shop animals) is to also spread awareness about fostering, donating, and volunterring! 
-  <br></br>
-
+  <h3 align="center">DISCLAIMER</h3>
+  <p align="center">Because this app is utilizing the free version of Render, timing for pages to render may delay by a few seconds</h4>
+<br>
   <h3>Mock User Account (Can Be Used To Test Site)</h3>
   <table align="center">
   <tr>
