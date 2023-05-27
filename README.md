@@ -1,6 +1,9 @@
 <h1 align="center">Lend A Paw</h1>
 <div align="center">
 <img src="https://github.com/Yolisss/Lend-A-Paw/assets/106282120/2d458cf7-c83b-4a72-8651-fc7bf99817b0" />
+  <h4>LinkedIn: www.linkedin.com/in/
+yolisma-zacarias4
+  </h4>
 </div>
 
 ## Contents
