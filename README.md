@@ -6,6 +6,7 @@
 ## Contents
 
 - About
+- Mock User Account
 - Tech Stack
 - API Reference
 - Official Database Schema
