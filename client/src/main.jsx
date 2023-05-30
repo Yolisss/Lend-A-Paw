@@ -5,6 +5,11 @@ import "./index.css";
 import "semantic-ui-css/semantic.min.css";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+//main.jsx = main entry point for this app
+//what file or peice of code will be executed in order
+//for it to boot up the app
+//"what do you need to do to activate react and reload on your page"
+//
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider
