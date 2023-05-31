@@ -121,7 +121,7 @@ const AdoptionForm = (props) => {
         onSubmit={handleSubmit}
       >
         <Form.Group>
-          <Form.Label>Full Name</Form.Label>
+          <Form.Label htmlFor="add-user-fullname">Full Name</Form.Label>
           <input
             type="text"
             id="add-user-fullname"
@@ -132,7 +132,7 @@ const AdoptionForm = (props) => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Email</Form.Label>
+          <Form.Label htmlFor="add-user-email">Email</Form.Label>
           <input
             type="text"
             id="add-user-email"
@@ -142,7 +142,7 @@ const AdoptionForm = (props) => {
             onChange={handleEmailChange}
           />
           <Form.Group>
-            <Form.Label>Reason</Form.Label>
+            <Form.Label htmlFor="add-user-reason">Reason</Form.Label>
             <input
               type="text"
               id="add-user-reason"
