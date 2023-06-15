@@ -5,13 +5,13 @@
 
 ## Contents
 
-- About
-- Mock User Account
-- Tech Stack
-- API Reference
-- Official Database Schema
-- Wireframe
-- Installation
+- [About](#about)
+- [Mock User Account](#mock-user-account)
+- [Tech Stack](#tech-stack)
+- [API Reference](#api-reference)
+- [Official Database Schema](#official-database-schema)
+- [Wireframe](#wireframe)
+- [Installation](#installation)
 
 
 <h2>About<h2>
@@ -20,7 +20,7 @@
   <h3 align="center">DISCLAIMER</h3>
   <p align="center">Because this app is utilizing the free version of Render, timing for pages to render may delay by a few seconds</h4>
 <br>
-  <h3>Mock User Account (Can Be Used To Test Site)</h3>
+  <h3>Mock User Account</h3>
   <table align="center">
   <tr>
     <th>EMAIL</th>
