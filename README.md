@@ -85,7 +85,7 @@
 <table align="center">
   <tr>
      <td align="center" width="96">
-        <img src="petfinder.png" width="60" height="48" alt="PetFinder" />
+        <img src="https://www.animalleague.org/wp-content/uploads/2020/02/corporate-logo-PETFINDER-022720-300x200.jpg" width="60" height="48" alt="PetFinder" />
      </td>
    <td align="center"><img src="https://user-images.githubusercontent.com/76704309/202351473-c2b9308b-9fd1-4dd6-980e-108bb1eb8731.png" height="40px"><br>Auth0</td>
   </tr>
