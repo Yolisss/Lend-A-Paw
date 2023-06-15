@@ -73,7 +73,7 @@
       <br>Bootstrap
     </td>
     <td align="center" width="96">
-        <img src="[https://pbs.twimg.com/profile_images/1337188620222906368/oNKK_fVe_400x400.jpg](https://www.petfinder.com/themes/custom/consumer_react/logo.svg)" width="48" height="48" alt="Render" />
+        <img src="https://intellyx.com/wp-content/uploads/2019/08/Render-cloud-intellyx-BC-logo.png" width="48" height="48" alt="Render" />
       <br>Render
     </td>
   </tr>
