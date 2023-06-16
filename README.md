@@ -177,7 +177,7 @@
 Step 1: Go to your terminal: clone the project and switch into the project directory.
 
 ```bash
-  git clone https://github.com/rubycmarroquin/LendAPaw
+  git clone https://github.com/yolisss/LendAPaw
   cd lendapaw
 ```
 
@@ -195,7 +195,7 @@ Step 4: Connect the database and the data.
 
 ```bash
   cd server
-  psql moneyonmymind -f db.sql
+  psql postgres -f db.sql
 ```
 
 Step 5: Start the program!
